@@ -39,6 +39,15 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## HELP!
+
+When I run `npm start` I see the following error code
+
+```Error: error:0308010C:digital envelope routines::unsupported```
+
+For now just run `export NODE_OPTIONS=--openssl-legacy-provider` and rerun `npm start`
+
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
