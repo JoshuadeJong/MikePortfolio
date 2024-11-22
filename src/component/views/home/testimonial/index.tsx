@@ -8,9 +8,11 @@ import View from "../../../../type/View";
 import {Section} from "../../../layout";
 import {SectionHeader} from "../../../typography";
 import TestimonialCard from "./components/TestimonialCard";
+import shuffle from "../../../../util/Shuffle";
 
 function Testimonials() {
     const {testimonials} = React.useContext(Content);
+    shuffle(testimonials);
 
     const [expanded, setExpanded] = React.useState(false);
 
