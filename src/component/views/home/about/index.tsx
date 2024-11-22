@@ -4,6 +4,7 @@ import WebsiteContext from "../../../../provider/WebsiteContext";
 import {Center, MGrid, Section} from "../../../layout";
 import View from "../../../../type/View";
 import {Par, SectionHeader} from "../../../typography";
+import mike1 from "../../../../assets/images/mike1.jpg"
 
 function About() {
     const {about} = React.useContext(WebsiteContext);
@@ -40,8 +41,8 @@ function About() {
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Center minHeight={`${photoHeight}px`}>
-                        <Box height="500px" width="400px">
-                            <MGrid row={12} column={12} height={`500px`}>
+                        <Box width="369px" height="553px" >
+                            <MGrid row={12} column={12}>
                                 <Box
                                     sx={{
                                         gridRowStart: 2,
@@ -71,11 +72,14 @@ function About() {
                                     }}
                                 >
                                     <Box
+                                        component="img"
                                         sx={{
                                             width: "100%",
                                             height: "100%",
                                             backgroundColor: "green",
                                         }}
+                                        alt=""
+                                        src={mike1}
                                     />
                                 </Box>
                             </MGrid>
