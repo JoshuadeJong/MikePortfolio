@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, Button} from "@mui/material";
+import {Box, Button, useTheme} from "@mui/material";
 import Grid from '@mui/material/Grid2';
 import Masonry from '@mui/lab/Masonry';
 
@@ -16,6 +16,7 @@ function Testimonials() {
     const [expanded, setExpanded] = React.useState(false);
     const [shouldShuffle, setShouldShuffle] = React.useState(true);
     const navigate = useNavigate();
+    const theme = useTheme();
 
     React.useLayoutEffect(() => {
         if (shouldShuffle) {
@@ -66,7 +67,7 @@ function Testimonials() {
                         zIndex: 2,
                         bottom: "0px",
                         position: "absolute",
-                        background: "linear-gradient(to top, rgba(248, 248, 248, 1),  rgba(248, 248, 248, 0))",
+                        background: `linear-gradient(to top, ${theme.palette.background.default},  rgba(0, 0, 0, 0))`,
                     }}/>
                 </Grid>
                 <Grid size={12} display="flex" justifyContent="center" alignItems="center">
