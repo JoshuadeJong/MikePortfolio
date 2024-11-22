@@ -5,6 +5,8 @@ import {Routes, Route, useLocation, Navigate} from "react-router-dom";
 import FeatureFlag from "../../type/FeatureFlag";
 import {selectTheme, themeLight} from "../../content/Theme";
 import SessionContext from "../../provider/SessionContext";
+import WebsiteContext from "../../provider/WebsiteContext";
+import WebsiteContent from "../../content/WebsiteContent";
 import Header from "./header";
 
 // Views
@@ -12,8 +14,6 @@ import Error from "./error";
 import View from "../../type/View";
 import Dev from "./dev";
 import {Page} from "../layout";
-import WebsiteContext from "../../provider/WebsiteContext";
-import WebsiteContent from "../../content/WebsiteContent";
 import Home from './home';
 
 function App() {
@@ -78,8 +78,6 @@ function App() {
                             />
                             <Route path={View.Home.path} element={<Home/>}/>
                             <Route path={View.Lesson.path} element={<Page>Lesson</Page>} />
-                            <Route path={View.Gigs.path} element={<Page>Gigs</Page>} />
-                            <Route path={View.Faq.path} element={<Page>FAQ</Page>} />
                             <Route path={View.Contact.path} element={<Page>Contact</Page>} />
                             <Route path={View.Dev.path} element={<Dev/>}/>
                             <Route path={"*"} element={<Error code={404}/>}/>

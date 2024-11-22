@@ -1,19 +1,17 @@
 import React from "react";
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import { Button, Container, Grid } from "@mui/material";
 
 
 import WebsiteContext from "../../../../provider/WebsiteContext";
-import HomeContext from "../../../../provider/HomeContext";
 import {Section} from "../../../layout";
 import View from "../../../../type/View";
 import {Par, SectionHeader} from "../../../typography";
 
 function Connect() {
-    const { emailLesson } = React.useContext(WebsiteContext);
-    const { connectMessage } = React.useContext(HomeContext);
+    const { contact } = React.useContext(WebsiteContext);
 
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-        window.open(`mailto:${emailLesson}`);
+        window.open(`mailto:${contact.email}`);
     };
 
     return (
@@ -24,7 +22,7 @@ function Connect() {
                         <SectionHeader>Let's connect!</SectionHeader>
                     </Grid>
                     <Grid item xs={12} sx={{ textAlign: "center" }}>
-                        <Par>{connectMessage}</Par>
+                        <Par>{contact.connectActionMessage}</Par>
                     </Grid>
                     <Grid item xs={12} sx={{ textAlign: "center" }}>
                         <Button variant="outlined" onClick={handleClick} size="large">

@@ -1,11 +1,14 @@
+import Contact from "./type/Contact";
+import WebsiteMeta  from "./type/WebsiteMeta";
+import Testimonial from "./type/Testimonial";
+import Lesson from "./type/Lesson";
+
 type WebsiteContentType = {
-    nameWebsite: string;
-    namePersonFull: string;
-    namePersonFirst: string;
-    namePersonLast: string;
-    emailLesson: string;
-    emailGig: string;
-    youtube: string;
+    about: Array<string>;
+    contact: Contact;
+    lesson: Lesson;
+    testimonials: Array<Testimonial>,
+    website: WebsiteMeta,
 }
 
 export default WebsiteContentType;

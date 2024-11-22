@@ -9,34 +9,36 @@ import TerminalIcon from "@mui/icons-material/Terminal";
 import EmailIcon from "@mui/icons-material/Email";
 import Diversity1Icon from "@mui/icons-material/Diversity1";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
+import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
 
 
 class View {
-    static readonly Home = new View("Home", HomeIcon, "/home");
+    static readonly Home = new View("Home", HomeIcon, "/type");
     static readonly Home_About = new View(
         "About",
         FaceIcon,
-        "/home#about"
+        "/type#about"
     );
     static readonly Home_Project = new View(
         "Project",
         TerminalIcon,
-        "/home#projects"
+        "/type#projects"
     );
     static readonly Home_Lessons = new View(
         "Lessons",
         SchoolIcon,
-        "/home#skills"
+        "/type#skills"
     );
     static readonly Home_Testimonial = new View(
-        "Testimonials",
+        "Reviews",
         Diversity1Icon,
-        "/home#Testimonials"
+        "/type#Testimonials"
     );
     static readonly Home_Contact = new View(
         "Contact",
         EmailIcon,
-        "/home#connect"
+        "/type#connect"
     );
 
     static readonly Lesson = new View(
@@ -44,17 +46,26 @@ class View {
         LibraryBooksIcon,
         "/lesson"
     )
-
-    static readonly Gigs = new View(
-        "Gigs",
-        LibraryBooksIcon,
-        "/gigs"
+    static readonly Lesson_Booking = new View(
+        "Lesson Booking",
+        SchoolIcon,
+        "/lesson/booking"
+    )
+    static readonly Lesson_Material = new View(
+        "Lesson Material",
+        MenuBookIcon,
+        "/lesson/material"
+    )
+    static readonly Lesson_Listen = new View(
+        "Listen",
+        LibraryMusicIcon,
+        "/lesson/listen"
     )
 
-    static readonly Faq = new View(
-        "FAQ",
-        LibraryBooksIcon,
-        "/FAQ"
+    static  readonly Testimonial = new View(
+        "Reviews",
+        Diversity1Icon,
+        "/reviews"
     )
 
     static readonly Contact = new View(

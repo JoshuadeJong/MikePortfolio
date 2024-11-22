@@ -1,14 +1,12 @@
 import React from "react";
 import { Grid, Box } from "@mui/material";
-
-
-import HomeContext from "../../../../provider/HomeContext";
+import WebsiteContext from "../../../../provider/WebsiteContext";
 import {Center, MGrid, Section} from "../../../layout";
 import View from "../../../../type/View";
 import {Par, SectionHeader} from "../../../typography";
 
 function About() {
-    const { about } = React.useContext(HomeContext);
+    const { about } = React.useContext(WebsiteContext);
     const photoRef = React.createRef<HTMLDivElement>();
     const [photoHeight, setPhotoHeight] = React.useState(0);
 

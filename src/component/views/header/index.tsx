@@ -2,7 +2,6 @@ import React from "react";
 import {AppBar, Box, Toolbar, Container, Typography} from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-
 import DesktopMenu from "./components/DesktopMenu";
 import MobileMenu from "./components/MobileMenu";
 import HideOnScroll from "./components/HideOnScroll";
@@ -14,19 +13,21 @@ import WebsiteContext from "../../../provider/WebsiteContext";
 
 function Header() {
     const { featureFlags } = React.useContext(SessionContext);
-    const { nameWebsite } = React.useContext(WebsiteContext);
+    const { website } = React.useContext(WebsiteContext);
 
     let mainViews = [
         View.Home,
-        View.Lesson,
-        View.Gigs,
-        View.Faq,
-        View.Contact,
+        // @ts-ignore
+        ...(featureFlags[FeatureFlag.Page_Lesson] ? [View.Lesson] : []),
+        // @ts-ignore
+        ...(featureFlags[FeatureFlag.Page_Review] ? [View.Testimonial] : []),
+        // @ts-ignore
+        ...(featureFlags[FeatureFlag.Page_Contact] ? [View.Contact] : []),
         // @ts-ignore
         ...(featureFlags[FeatureFlag.DEV] ? [View.Dev] : []),
     ];
 
-    const subViews = new Map<View, Array<View>>([
+    let subViews = new Map<View, Array<View>>([
         [
             View.Home,
             [
@@ -36,7 +37,23 @@ function Header() {
                 View.Home_Contact,
             ],
         ],
+        [
+            View.Lesson,
+            [
+                // @ts-ignore
+                ...(featureFlags[FeatureFlag.Page_Lesson_Booking] ? [View.Lesson_Booking] : []),
+                // @ts-ignore
+                ...(featureFlags[FeatureFlag.Page_Lesson_Material] ? [View.Lesson_Material] : []),
+                // @ts-ignore
+                ...(featureFlags[FeatureFlag.Page_Lesson_Listen] ? [View.Lesson_Listen] : []),
+            ]
+        ]
     ]);
+
+    // @ts-ignore
+    if (!(featureFlags[FeatureFlag.Page_Lesson_Booking] || featureFlags[FeatureFlag.Page_Lesson_Material] || featureFlags[FeatureFlag.Page_Lesson_Listen])) {
+        subViews.delete(View.Lesson);
+    }
 
     const [isHidden, setIsHidden] = React.useState(false);
 
@@ -65,7 +82,7 @@ function Header() {
                                         textWrap: "nowrap",
                                     }}
                                 >
-                                    { nameWebsite }
+                                    { website.name }
                                 </Typography>
                             </Center>
                         </Box>
