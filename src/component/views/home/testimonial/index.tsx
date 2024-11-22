@@ -9,12 +9,24 @@ import {Section} from "../../../layout";
 import {SectionHeader} from "../../../typography";
 import TestimonialCard from "./components/TestimonialCard";
 import shuffle from "../../../../util/Shuffle";
+import {useNavigate} from "react-router-dom";
 
 function Testimonials() {
     const {testimonials} = React.useContext(Content);
-    shuffle(testimonials);
-
     const [expanded, setExpanded] = React.useState(false);
+    const [shouldShuffle, setShouldShuffle] = React.useState(true);
+    const navigate = useNavigate();
+
+    React.useLayoutEffect(() => {
+        if (shouldShuffle) {
+            shuffle(testimonials);
+            setShouldShuffle(false);
+        }
+    })
+
+    React.useEffect(() => {
+        setShouldShuffle(true);
+    }, [navigate]);
 
     function handleCLick() {
         setExpanded(!expanded)
