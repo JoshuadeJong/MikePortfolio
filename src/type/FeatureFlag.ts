@@ -1,4 +1,3 @@
-
 // Should the feature be on by default for development
 const isDev = process.env.NODE_ENV === "development";
 
@@ -44,15 +43,16 @@ class FeatureFlag {
         "Enable the lesson listen page for the website."
     )
 
-    static values(): Array<FeatureFlag> {
-        return Object.values(FeatureFlag);
-    }
-
     constructor(
         readonly name: string,
         readonly defaultValue: Boolean,
         readonly description?: string
-    ) {}
+    ) {
+    }
+
+    static values(): Array<FeatureFlag> {
+        return Object.values(FeatureFlag);
+    }
 
     toString() {
         return this.name;

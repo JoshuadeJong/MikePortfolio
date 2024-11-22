@@ -1,7 +1,8 @@
 import Contact from "./type/Contact";
-import WebsiteMeta  from "./type/WebsiteMeta";
+import WebsiteMeta from "./type/WebsiteMeta";
 import Testimonial from "./type/Testimonial";
 import Lesson from "./type/Lesson";
+import Listen from "./type/Listen";
 
 type WebsiteContentType = {
     about: Array<string>;
@@ -9,6 +10,7 @@ type WebsiteContentType = {
     lesson: Lesson;
     testimonials: Array<Testimonial>,
     website: WebsiteMeta,
+    listen: Listen,
 }
 
 export default WebsiteContentType;

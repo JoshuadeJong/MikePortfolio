@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid } from "@mui/material";
+import {Container, Grid} from "@mui/material";
 import {Center} from "../../layout";
 import {Par, SectionText} from "../../typography";
 
@@ -10,7 +10,7 @@ type Props = {
 };
 
 function Error(props: Props) {
-    const { code, children } = props;
+    const {code, children} = props;
 
     const messages = {
         400: "Looks like your computer is drunk and making invalid requests...",
@@ -24,7 +24,7 @@ function Error(props: Props) {
     return (
         <Container maxWidth={"md"}>
             <Center minHeight={"50vh"}>
-                <Grid container spacing={2} sx={{ textAlign: "center" }}>
+                <Grid container spacing={2} sx={{textAlign: "center"}}>
                     <Grid item xs={12}>
                         <SectionText>{code} error</SectionText>
                     </Grid>

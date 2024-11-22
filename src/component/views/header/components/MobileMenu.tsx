@@ -24,7 +24,7 @@ type Props = {
 };
 
 function MobileMenu(props: Props) {
-    const { mainViews, subViews, handleLinkClick } = props;
+    const {mainViews, subViews, handleLinkClick} = props;
 
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [isSectionOpen, setIsSectionOpen] = React.useState<null | View>(null);
@@ -46,9 +46,9 @@ function MobileMenu(props: Props) {
             <IconButton
                 size="large"
                 onClick={toggleDrawer(true)}
-                sx={{ color: "text.secondary" }}
+                sx={{color: "text.secondary"}}
             >
-                <MenuIcon />
+                <MenuIcon/>
             </IconButton>
 
             <SwipeableDrawer
@@ -72,8 +72,10 @@ function MobileMenu(props: Props) {
                                         handleLinkClick(view.path, true);
                                     }}
                                 >
-                                    { view.icon != null ? <ListItemIcon><view.icon /></ListItemIcon> : null }
-                                    <ListItemText primary={view.displayName} />
+                                    {view.icon != null ? <ListItemIcon>
+                                        <view.icon/>
+                                    </ListItemIcon> : null}
+                                    <ListItemText primary={view.displayName}/>
                                 </ListItemButton>
                                 {subViews.has(view) && (
                                     <Button
@@ -86,7 +88,7 @@ function MobileMenu(props: Props) {
                                             color: "text.secondary",
                                         }}
                                     >
-                                        {isSectionOpen === view ? <ExpandLess /> : <ExpandMore />}
+                                        {isSectionOpen === view ? <ExpandLess/> : <ExpandMore/>}
                                     </Button>
                                 )}
                             </ListItem>
@@ -105,17 +107,17 @@ function MobileMenu(props: Props) {
                                                     setIsMenuOpen(false);
                                                     handleLinkClick(subView.path, true);
                                                 }}
-                                                sx={{ paddingLeft: 4 }}
+                                                sx={{paddingLeft: 4}}
                                             >
                                                 <ListItemIcon>
-                                                    <subView.icon />
+                                                    <subView.icon/>
                                                 </ListItemIcon>
-                                                <ListItemText primary={subView.displayName} />
+                                                <ListItemText primary={subView.displayName}/>
                                             </ListItemButton>
                                         </ListItem>
                                     ))}
                                 </List>
-                                <Divider />
+                                <Divider/>
                             </Collapse>
                         </>
                     ))}

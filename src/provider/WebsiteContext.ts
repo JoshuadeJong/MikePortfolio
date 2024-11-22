@@ -14,6 +14,7 @@ const WebsiteContext = React.createContext<WebsiteContentType>({
         connectActionMessage: "",
     },
     lesson: {
+        info: [],
         options: [],
         optionsCallback: ""
     },
@@ -21,6 +22,12 @@ const WebsiteContext = React.createContext<WebsiteContentType>({
     website: {
         name: "",
     },
+    listen: {
+        personal: [],
+        favoriteAlbums: [],
+        jazzRecommendation: [],
+        bluesRecommendation: [],
+    }
 })
 
 export default WebsiteContext;

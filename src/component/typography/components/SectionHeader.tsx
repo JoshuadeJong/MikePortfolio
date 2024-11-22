@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import {Box} from "@mui/material";
 
 import SectionText from "./SectionText";
 
@@ -9,7 +9,7 @@ type Props = {
 };
 
 function SectionHeader(props: Props) {
-    const { line, children } = {
+    const {line, children} = {
         ...props,
         line: props.line || "all",
     };

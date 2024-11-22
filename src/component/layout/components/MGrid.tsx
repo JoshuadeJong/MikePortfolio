@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import {Box} from "@mui/material";
 
 type Props = {
     height?: string;
@@ -9,7 +9,7 @@ type Props = {
 };
 
 function MGrid(props: Props) {
-    const { height, row, column, children } = {
+    const {height, row, column, children} = {
         ...props,
         height: props.height || "inherit",
         row: props.row || 12,
@@ -22,7 +22,7 @@ function MGrid(props: Props) {
                 display: "grid",
                 gridTemplateRows: `repeat(${row}, 1fr)`,
                 gridTemplateColumns: `repeat(${column}, 1fr)`,
-                height: { height },
+                height: {height},
                 width: "100%",
             }}
         >

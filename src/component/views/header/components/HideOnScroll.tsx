@@ -1,5 +1,5 @@
 import React from "react";
-import { Slide, useScrollTrigger } from "@mui/material";
+import {Slide, useScrollTrigger} from "@mui/material";
 
 type Props = {
     setIsHidden?: (value: boolean) => void;
@@ -7,7 +7,7 @@ type Props = {
 };
 
 function HideOnScroll(props: Props) {
-    const { setIsHidden, children } = props;
+    const {setIsHidden, children} = props;
     const trigger = useScrollTrigger();
 
     React.useEffect(() => {

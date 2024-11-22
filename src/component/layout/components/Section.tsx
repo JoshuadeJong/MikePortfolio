@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import {Box} from "@mui/material";
 
 type Props = {
     id?: string;
@@ -8,7 +8,7 @@ type Props = {
 };
 
 function Section(props: Props) {
-    const { id, noPadding, children } = {
+    const {id, noPadding, children} = {
         ...props,
         noPadding: props.noPadding || false,
     };
@@ -18,7 +18,7 @@ function Section(props: Props) {
             id={id}
             sx={{
                 width: "100%",
-                paddingBottom: !noPadding ? "8vh" : "unset",
+                paddingBottom: !noPadding ? "4vh" : "unset",
             }}
         >
             {children}

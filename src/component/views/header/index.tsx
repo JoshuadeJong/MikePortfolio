@@ -1,6 +1,6 @@
 import React from "react";
-import {AppBar, Box, Toolbar, Container, Typography} from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import {AppBar, Box, Container, Toolbar, Typography} from "@mui/material";
+import {useNavigate} from "react-router-dom";
 
 import DesktopMenu from "./components/DesktopMenu";
 import MobileMenu from "./components/MobileMenu";
@@ -12,8 +12,8 @@ import {Center} from "../../layout";
 import WebsiteContext from "../../../provider/WebsiteContext";
 
 function Header() {
-    const { featureFlags } = React.useContext(SessionContext);
-    const { website } = React.useContext(WebsiteContext);
+    const {featureFlags} = React.useContext(SessionContext);
+    const {website} = React.useContext(WebsiteContext);
 
     let mainViews = [
         View.Home,
@@ -59,7 +59,7 @@ function Header() {
 
     const navigate = useNavigate();
     const handleLinkClick = React.useCallback(
-        (path: string, replace: boolean) => navigate(path, { replace: replace }),
+        (path: string, replace: boolean) => navigate(path, {replace: replace}),
         [navigate]
     );
 
@@ -82,14 +82,14 @@ function Header() {
                                         textWrap: "nowrap",
                                     }}
                                 >
-                                    { website.name }
+                                    {website.name}
                                 </Typography>
                             </Center>
                         </Box>
                         <Box
                             sx={{
                                 flexGrow: 0,
-                                display: { xs: "none", sm: "flex" },
+                                display: {xs: "none", sm: "flex"},
                                 marginLeft: "auto",
                             }}
                         >
@@ -105,7 +105,7 @@ function Header() {
                         <Box
                             sx={{
                                 flexGrow: 0,
-                                display: { xs: "flex", sm: "none" },
+                                display: {xs: "flex", sm: "none"},
                                 marginLeft: "auto",
                             }}
                         >

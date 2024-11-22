@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import {Box} from "@mui/material";
 
 type Props = {
     rowStart: number;
@@ -11,7 +11,7 @@ type Props = {
 };
 
 function MItem(props: Props) {
-    const { rowStart, rowEnd, columnStart, columnEnd, zIndex, children } = props;
+    const {rowStart, rowEnd, columnStart, columnEnd, zIndex, children} = props;
 
     return (
         <Box

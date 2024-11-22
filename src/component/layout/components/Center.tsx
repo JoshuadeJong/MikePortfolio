@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import {Box} from "@mui/material";
 
 type Props = {
     minHeight: string;
@@ -7,7 +7,7 @@ type Props = {
 };
 
 function Center(props: Props) {
-    const { minHeight, children } = props;
+    const {minHeight, children} = props;
 
     return (
         <Box

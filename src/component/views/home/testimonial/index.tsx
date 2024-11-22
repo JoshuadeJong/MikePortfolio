@@ -10,7 +10,7 @@ import {SectionHeader} from "../../../typography";
 import TestimonialCard from "./components/TestimonialCard";
 
 function Testimonials() {
-    const { testimonials } = React.useContext(Content);
+    const {testimonials} = React.useContext(Content);
 
     const [expanded, setExpanded] = React.useState(false);
 
@@ -20,16 +20,16 @@ function Testimonials() {
 
     return (
         <Section id={View.Home_Testimonial.getHash()}>
-            <Grid container spacing={4}>
+            <Grid container spacing={2}>
                 <Grid size={12}>
-                    <SectionHeader>Why people love working with me!</SectionHeader>
+                    <SectionHeader>Why people love learning from me!</SectionHeader>
                 </Grid>
-                <Grid container size={12} spacing={4} sx={{position:"relative"}}>
+                <Grid container size={12} spacing={4} sx={{position: "relative"}}>
                     <Box sx={{
                         height: expanded ? undefined : 600,
-                        overflow:"hidden",
-                    }} >
-                        <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 4}} spacing={2} sx={{margin: 0}}>
+                        overflow: "hidden",
+                    }}>
+                        <Masonry columns={{xs: 1, sm: 2, md: 3, lg: 4}} spacing={2} sx={{margin: 0}}>
                             {testimonials.map((testimonial, index) => {
                                 return (
                                     <Box
@@ -39,26 +39,26 @@ function Testimonials() {
                                             marginRight: "auto",
                                         }}
                                     >
-                                        <TestimonialCard testimonial={testimonial} />
+                                        <TestimonialCard testimonial={testimonial}/>
                                     </Box>
                                 );
                             })}
                         </Masonry>
                     </Box>
-                        <Box sx ={{
-                            display: expanded ? "none" : "block",
-                            height: 100,
-                            width: "100%",
-                            zIndex: 2,
-                            bottom: "0px",
-                            position: "absolute",
-                            background: "linear-gradient(to top, rgba(248, 248, 248, 1),  rgba(248, 248, 248, 0))",
-                        }}/>
+                    <Box sx={{
+                        display: expanded ? "none" : "block",
+                        height: 100,
+                        width: "100%",
+                        zIndex: 2,
+                        bottom: "0px",
+                        position: "absolute",
+                        background: "linear-gradient(to top, rgba(248, 248, 248, 1),  rgba(248, 248, 248, 0))",
+                    }}/>
                 </Grid>
                 <Grid size={12} display="flex" justifyContent="center" alignItems="center">
 
-                    <Button onClick={() => handleCLick() }>
-                        { !expanded ? "Read More Reviews" : "Read Less Reviews" }
+                    <Button onClick={() => handleCLick()}>
+                        {!expanded ? "Read More Reviews" : "Read Less Reviews"}
                     </Button>
                 </Grid>
             </Grid>

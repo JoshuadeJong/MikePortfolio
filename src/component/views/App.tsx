@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container, CssBaseline, PaletteMode, ThemeProvider} from "@mui/material";
-import {Routes, Route, useLocation, Navigate} from "react-router-dom";
+import {Navigate, Route, Routes, useLocation} from "react-router-dom";
 
 import FeatureFlag from "../../type/FeatureFlag";
 import {selectTheme, themeLight} from "../../content/Theme";
@@ -70,15 +70,15 @@ function App() {
             >
                 <WebsiteContext.Provider value={WebsiteContent}>
                     <Header/>
-                    <Container maxWidth="lg" sx={{ paddingTop: 16}}>
+                    <Container maxWidth="lg" sx={{paddingTop: 16}}>
                         <Routes>
                             <Route
                                 path="/"
                                 element={<Navigate to={View.Home.path} replace/>}
                             />
                             <Route path={View.Home.path} element={<Home/>}/>
-                            <Route path={View.Lesson.path} element={<Page>Lesson</Page>} />
-                            <Route path={View.Contact.path} element={<Page>Contact</Page>} />
+                            <Route path={View.Lesson.path} element={<Page>Lesson</Page>}/>
+                            <Route path={View.Contact.path} element={<Page>Contact</Page>}/>
                             <Route path={View.Dev.path} element={<Dev/>}/>
                             <Route path={"*"} element={<Error code={404}/>}/>
                         </Routes>

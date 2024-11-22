@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography } from "@mui/material";
+import {Typography} from "@mui/material";
 
 type Props = {
     display?: "block" | "inline-block";
@@ -7,7 +7,7 @@ type Props = {
 };
 
 function SectionText(props: Props) {
-    const { display, children } = {
+    const {display, children} = {
         ...props,
         display: props.display || "block",
     };
@@ -15,7 +15,7 @@ function SectionText(props: Props) {
         <Typography
             variant="h4"
             sx={{
-                display: { display },
+                display: {display},
                 margin: "0px auto",
             }}
         >

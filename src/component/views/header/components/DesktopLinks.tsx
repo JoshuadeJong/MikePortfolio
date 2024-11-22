@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@mui/material";
+import {Button} from "@mui/material";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
@@ -10,7 +10,7 @@ type Props = {
 };
 
 function DesktopLink(props: Props) {
-    const { text, onClick, open } = props;
+    const {text, onClick, open} = props;
 
     return (
         <Button
@@ -27,9 +27,9 @@ function DesktopLink(props: Props) {
             endIcon={
                 open !== undefined ? (
                     open ? (
-                        <ExpandLessIcon />
+                        <ExpandLessIcon/>
                     ) : (
-                        <ExpandMoreIcon />
+                        <ExpandMoreIcon/>
                     )
                 ) : undefined
             }

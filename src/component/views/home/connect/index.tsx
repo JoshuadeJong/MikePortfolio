@@ -1,5 +1,6 @@
 import React from "react";
-import { Button, Container, Grid } from "@mui/material";
+import {Button, Container} from "@mui/material";
+import Grid from '@mui/material/Grid2';
 
 
 import WebsiteContext from "../../../../provider/WebsiteContext";
@@ -8,7 +9,7 @@ import View from "../../../../type/View";
 import {Par, SectionHeader} from "../../../typography";
 
 function Connect() {
-    const { contact } = React.useContext(WebsiteContext);
+    const {contact} = React.useContext(WebsiteContext);
 
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         window.open(`mailto:${contact.email}`);
@@ -17,14 +18,14 @@ function Connect() {
     return (
         <Section id={View.Home_Contact.getHash()}>
             <Container maxWidth="sm" disableGutters>
-                <Grid container spacing={4}>
-                    <Grid item xs={12}>
+                <Grid container spacing={2}>
+                    <Grid size={12}>
                         <SectionHeader>Let's connect!</SectionHeader>
                     </Grid>
-                    <Grid item xs={12} sx={{ textAlign: "center" }}>
+                    <Grid size={12} sx={{textAlign: "center"}}>
                         <Par>{contact.connectActionMessage}</Par>
                     </Grid>
-                    <Grid item xs={12} sx={{ textAlign: "center" }}>
+                    <Grid size={12} sx={{textAlign: "center"}}>
                         <Button variant="outlined" onClick={handleClick} size="large">
                             Say Hello
                         </Button>

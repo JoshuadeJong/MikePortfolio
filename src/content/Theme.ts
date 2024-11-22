@@ -1,5 +1,5 @@
 import {createTheme, responsiveFontSizes} from "@mui/material";
-import { TypographyOptions } from "@mui/material/styles/createTypography";
+import {TypographyOptions} from "@mui/material/styles/createTypography";
 
 const typography: TypographyOptions = {
     h1: {
@@ -26,6 +26,18 @@ const typography: TypographyOptions = {
         fontSize: "1.25rem",
         fontWeight: 400,
     },
+    body1: {
+        fontSize: "1rem",
+        fontWeight: 400,
+        lineHeight: "1.43",
+        letterSpacing: "0.01071em",
+    },
+    body2: {
+        fontSize: "1rem",
+        fontWeight: 400,
+        lineHeight: "1.43",
+        letterSpacing: "0.01071em",
+    }
 };
 
 let themeLight = createTheme({
@@ -74,4 +86,4 @@ const selectTheme = {
     "dark": themeLight,
 }
 
-export {selectTheme ,themeLight };
+export {selectTheme, themeLight};

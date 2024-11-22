@@ -23,7 +23,7 @@ type Props = {
 };
 
 function DesktopMenu(props: Props) {
-    const { mainViews, subViews, handleLinkClick, isHidden } = props;
+    const {mainViews, subViews, handleLinkClick, isHidden} = props;
 
     // Sub Menu Setup
     const refs = React.useRef(
@@ -74,7 +74,7 @@ function DesktopMenu(props: Props) {
                     key={`${view}-menu`}
                 >
                     {/*  Menu Item */}
-                    <Box ref={refs.current[index]} sx={{ marginRight: 1 }}>
+                    <Box ref={refs.current[index]} sx={{marginRight: 1}}>
                         <DesktopLink
                             onClick={() => handleLinkClick(view.path, true)}
                             text={view.displayName + " "}
@@ -94,7 +94,7 @@ function DesktopMenu(props: Props) {
                                 pointerEvents: subMenuOpen === view ? undefined : "none",
                             }}
                         >
-                            {({ TransitionProps }) => (
+                            {({TransitionProps}) => (
                                 <Fade {...TransitionProps} timeout={350}>
                                     <Paper
                                         elevation={0}
@@ -105,7 +105,7 @@ function DesktopMenu(props: Props) {
                                             textColor: "text.secondary",
                                         }}
                                     >
-                                        <List sx={{ padding: 0 }}>
+                                        <List sx={{padding: 0}}>
                                             {subViews.get(view)?.map((subView, index) => (
                                                 <Box key={`${subView.displayName}-submenu`}>
                                                     <ListItem disablePadding>
@@ -121,16 +121,16 @@ function DesktopMenu(props: Props) {
                                                             }}
                                                         >
                                                             <ListItemIcon>
-                                                                <subView.icon />
+                                                                <subView.icon/>
                                                             </ListItemIcon>
                                                             <ListItemText
                                                                 primary={subView.displayName}
-                                                                sx={{ marginLeft: 2 }}
+                                                                sx={{marginLeft: 2}}
                                                             />
                                                         </ListItemButton>
                                                     </ListItem>
                                                     {index < (subViews.get(view)?.length || 0) - 1 && (
-                                                        <Divider />
+                                                        <Divider/>
                                                     )}
                                                 </Box>
                                             ))}

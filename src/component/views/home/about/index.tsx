@@ -1,12 +1,12 @@
 import React from "react";
-import { Grid, Box } from "@mui/material";
+import {Box, Grid} from "@mui/material";
 import WebsiteContext from "../../../../provider/WebsiteContext";
 import {Center, MGrid, Section} from "../../../layout";
 import View from "../../../../type/View";
 import {Par, SectionHeader} from "../../../typography";
 
 function About() {
-    const { about } = React.useContext(WebsiteContext);
+    const {about} = React.useContext(WebsiteContext);
     const photoRef = React.createRef<HTMLDivElement>();
     const [photoHeight, setPhotoHeight] = React.useState(0);
 
@@ -23,7 +23,7 @@ function About() {
 
     return (
         <Section id={View.Home_About.getHash()}>
-            <Grid container spacing={4}>
+            <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <SectionHeader>Here is a bit about me!</SectionHeader>
                 </Grid>

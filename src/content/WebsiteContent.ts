@@ -8,16 +8,24 @@ const WebsiteContent: WebsiteContentType = {
         namePersonFull: "Mike Eskenazi",
         namePersonFirst: "Mike",
         namePersonLast: "Eskenazi",
-        email: "YourEmailHere@gmail.com",
+        email: "michaelsknz16@gmail.com",
         phone: "",
         youtube: "https://www.youtube.com/@DolphLundgrenix6909",
         connectActionMessage: "Although I’m not currently looking for any new opportunities, I'm always open to hearing about them. Whether you have a question or just want to say hi, I’ll try my best to get back to you!",
     },
     about: [
-        "I grew up around music and I think I was always interested in it from a young age. Nobody in my family played music but my dad is a huge music lover. Though he wasn’t a musician himself, he went to Franklin High School in the 1970s when the Franklin Jazz Lab was great, and most of his friends played music. Some of them went on to be professional musicians and became influences in my life. So, I grew up listening to all the great funk, R&B, and soul music of the 70s. When I started playing music, I got really into the blues and Jimi Hendrix. But after about three years, I wanted to expand my horizons. I was reading an interview in Guitar Player magazine with Vernon Reid, of Living Colour, one of my favorite guitarists. He talked about being influenced by Eric Dolphy and Charles Mingus. So, the next day I left school early, went to Easy Street Records in Seattle, and bought Out to Lunch and Mingus Ah Um. Pretty much forward from there, I was obsessed with jazz.",
-        "I was going to Ballard High School at the time, in my senior year, I decided to join the jazz band. Gary Hammon taught saxophone there and he ended up being a huge musical influence for me, and one of my best friends. I would skip class and just talk to him about music for hours. He ended up giving me one of my first gigs and some of the most valuable musical advice I’ve ever gotten. We have been playing together ever since. He also encouraged me to go and study in New York. "
+        "My name is Michael Eskenazi, I'm a professional guitarist working in the industry since 2012. After Graduation from Ballard High School in Seattle, Washington I was offered a scholarship to New School for Jazz and Contemporary Music, and moved to New York City to pursue music.",
+        "During my time in New York I studied with and was mentored by some of the finest musicians this planet has to offer. Some of those musicians include: Bruce Edwards, Charles Tolliver, Jimmy Owens, Vic Juris, Ed Cherry and Onaje Allan Gumbs, all of whom helped shape and mold my musical outlook and style.",
+        "I gained a great amount of professional musical experience while in New York City playing everywhere from churches, private parties, weddings, festivals, jazz clubs and everything in between. Playing in such a wide variety of settings has helped me to be able to fit the needs of what ever musical setting I find myself in and how to sustain myself as a musician making a living in a place with the most talented and abundant amount of musicians in the world. I was also employed as a teacher at the Brooklyn Conservatory of Music and the Fred Astaire Dance studio.",
+        "I am currently residing in the Seattle area where I am an active teacher and a core member of Gary Hammons group Last Of The Tribe."
     ],
     lesson: {
+        info: [
+            "Teaching is one of my passions! Molding to your learning style is valuable and effective. Too often I see musicians focused on teaching the instrument in hand versus encompassing the overall principles of learning music. I incorporate a holistic approach by teaching the basic elements of music, including but not limited to: ear training, rhythm, tone, dynamics and harmony.",
+            "Learning music is more than becoming familiar with an instrument. It instills discipline, ignites the creative mind and develops an outlet for expression that can stay with you for a lifetime. My primary goal as a teacher is to share and nurture these benefits with every aspiring musician I meet.",
+            "I work with students of all ages and levels, including children as young as 5 years old. I offer in person for local clients, and zoom meetings for those who prefer it.",
+            "I look forward to working with you and exploring the joy of creating music together. Let's start with a brief meeting to get to know you, student and parent if applicable, and learn more about your goals as a musician."
+        ],
         options: [
             {
                 title: "Introduction Lesson",
@@ -51,7 +59,13 @@ const WebsiteContent: WebsiteContentType = {
                 ],
             }
         ],
-        optionsCallback: "Unsure what type of lesson is best for you or want to do something different? Reach out to me and we can figure it out!"
+        optionsCallback: "Ready to book now or unsure what type of lesson is best for you? Reach out to me and we can figure it out!"
+    },
+    listen: {
+        personal: [],
+        favoriteAlbums: [],
+        jazzRecommendation: [],
+        bluesRecommendation: [],
     },
     testimonials: [
         {
@@ -88,6 +102,38 @@ const WebsiteContent: WebsiteContentType = {
             text: "Michael is a phenomenal teacher.  I had practicing on my own for a few years but began to see improvements immediately after I started working with him.  He strikes a great balance between being extremely knowledgable and proficient while not complicating things, between being encouraging and challenging me to take the next step.  I would highly, highly recommend working with him if you're looking to improve.",
             person: "Aaron Parisi"
         },
+        {
+            text: "Mike is a great teacher, a kind person and an amazing musician. taking lessons with him has been a joy.\n" +
+                "\n" +
+                "He has given me a way to learn jazz that simplified it perfectly, just enough for me to get my bearings, and showed me how to keep learning on my own.\n" +
+                "\n" +
+                "He has even gone out of his way to record videos and audio when i had questions in between lessons.\n" +
+                "\n" +
+                "One big takeaway is his mindset that we as people and musicians are always learning and that's a huge part of the fun. Each time we take another loop around the circle(whether revisiting and practicing chords, rhythms, phrasing, etc.) we see each station from a new vantage point.\n" +
+                "\n" +
+                "What a great way to think about music, if not life. Thanks Mike!",
+            person: "Mark E",
+        },
+        {
+            text: "Michael has been teaching my son guitar for about 6 months now and he has greatly improved! Michael is really challenging him to become a better player, with ear training and having him create his own songs. I highly encourage anyone looking for a guitar instructor to work with Michael, he has been amazing!",
+            person: "Tracy Rabah",
+        },
+        {
+            text: "Mike is the man, he has helped me develop my guitar playing greatly. He is very knowledgeable and an overall great fellow. I highly recommend his lessons if your looking to get out of a rut or if you just want to take your playing to the next level",
+            person: "Ryker S",
+        },
+        {
+            text: "I highly recommend Mike for guitar lessons. He’s super friendly, knowledgeable, and flexible. He is super adaptable to different learning styles and is really patient with you as a student to learn at a pace that is suited to your comfort level. Whether you choose to start lessons on a whim, or for a specific learning reason, Mike is definitely well equipped to be a great teacher for anyone.",
+            person: "Gloria G"
+        },
+        {
+            text: "I have been taking lessons from Michael for a few months now and I am always surprised by how fast I am progressing. He has been very good about understanding exactly where I am at with guitar and exactly what I need to make the next step. His instructions are always clear and simple and easily lead towards what ever aspect of the guitar I ask to learn about. All in an excellent teacher and I would highly recommend him to any one interested in guitar.",
+            person: "Nathan Melnyk"
+        },
+        {
+            text: "I'd definitely recommend checking out Mike if you're looking for guitar lessons! I started taking some lessons with him earlier this week and he's been extremely helpful in helping me improve. Mike is super knowledgeable on technique, and will help you learn more about music theory to enhance your understanding of how music is put together. Plus he's a fun guy to spend the lesson time with, and a fairly encouraging teacher!",
+            person: "Alex Zhou"
+        }
     ]
 }
 

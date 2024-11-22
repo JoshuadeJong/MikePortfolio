@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography } from "@mui/material";
+import {Typography} from "@mui/material";
 
 type Props = {
     noMargin?: boolean;
@@ -8,14 +8,14 @@ type Props = {
 };
 
 function Par(props: Props) {
-    const { noMargin, textColor, children } = {
+    const {noMargin, textColor, children} = {
         ...props,
         noMargin: props.noMargin ? "none" : "1rem",
-        textColor: props.textColor || "text.secondary",
+        textColor: props.textColor || "text.primary",
     };
     return (
         <Typography
-            variant="body1"
+            variant="body2"
             sx={{
                 marginBottom: noMargin,
                 color: textColor,

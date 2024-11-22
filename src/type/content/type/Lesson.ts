@@ -6,6 +6,7 @@ type LessonOption = {
 }
 
 type Lesson = {
+    info: Array<string>,
     options: Array<LessonOption>,
     optionsCallback: String,
 }
