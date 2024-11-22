@@ -1,10 +1,9 @@
 import React from "react";
-import {PaletteMode} from "@mui/material";
 import FeatureFlag from "../type/FeatureFlag";
 
 type SessionState = {
-    currentTheme: PaletteMode;
-    setCurrentTheme: (x: PaletteMode) => void;
+    currentTheme: string;
+    setCurrentTheme: (x: string) => void;
 
     // Feature Flags
     featureFlags: {};
@@ -14,7 +13,7 @@ type SessionState = {
 
 const SessionContext = React.createContext<SessionState>({
     currentTheme: "light",
-    setCurrentTheme(x: PaletteMode): void {
+    setCurrentTheme(x: string): void {
     },
 
     // Feature Flags

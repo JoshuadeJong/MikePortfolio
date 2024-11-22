@@ -56,34 +56,31 @@ let themeLight = createTheme({
     },
     typography: typography,
 });
+themeLight = responsiveFontSizes(themeLight);
 
-let themeBrowns = createTheme({
+let themeBrown = createTheme({
     palette: {
-        mode: "light",
+        mode: "dark",
         primary: {
-            dark: '#865d36',
-            main: '#93785b',
-            light: '#Ac8968',
+            main: "#00baff",
         },
         text: {
-            primary: "#3e362e",
-            secondary: "#fff",
+            primary: "#D4D4D6",
+            secondary: "#C79360",
         },
         background: {
-            default: "#Ac8968",
-            paper: "#93785b",
+            default: "#08243B",
+            paper: "#5E6F7C",
         },
     },
     typography: typography,
-});
+})
+themeBrown = responsiveFontSizes(themeBrown);
 
-themeLight = responsiveFontSizes(themeLight);
-themeBrowns = responsiveFontSizes(themeBrowns);
 
 const selectTheme = {
     "light": themeLight,
-    "brown": themeBrowns,
-    "dark": themeLight,
+    "brown": themeBrown,
 }
 
 export {selectTheme, themeLight};

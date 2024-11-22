@@ -7,11 +7,12 @@ class FeatureFlag {
         isDev,
         "Enable the feature flag override page for the website."
     );
-    static readonly LIGHT_THEME = new FeatureFlag(
-        "Light Theme",
+    static readonly THEME_SELECTOR = new FeatureFlag(
+        "Theme Selector",
         isDev,
-        "Enable the ability to switch to a primarily white theme for the website."
-    );
+        "A floating theme selector on all pages"
+    )
+
     static readonly Page_Contact = new FeatureFlag(
         "Page Contact",
         isDev,

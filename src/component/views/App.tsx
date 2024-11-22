@@ -1,5 +1,15 @@
 import React from 'react';
-import {Container, CssBaseline, PaletteMode, ThemeProvider} from "@mui/material";
+import {
+    Box,
+    Container,
+    CssBaseline,
+    FormControl,
+    MenuItem,
+    Select,
+    SelectChangeEvent,
+    ThemeProvider,
+    Typography
+} from "@mui/material";
 import {Navigate, Route, Routes, useLocation} from "react-router-dom";
 
 import FeatureFlag from "../../type/FeatureFlag";
@@ -17,7 +27,7 @@ import {Page} from "../layout";
 import Home from './home';
 
 function App() {
-    const [currentTheme, setCurrentTheme] = React.useState<PaletteMode>("light");
+    const [currentTheme, setCurrentTheme] = React.useState<string>("light");
     const [featureFlags, setFeatureFlags] = React.useState(() => {
         let tempObject = {};
         FeatureFlag.values().forEach(
@@ -37,6 +47,9 @@ function App() {
             [featureFlag]: value,
         });
     };
+    const handleThemeChange = (event: SelectChangeEvent) => {
+        setCurrentTheme(event.target.value as string);
+    }
 
     const {pathname, hash, key} = useLocation();
     React.useEffect(() => {
@@ -56,6 +69,7 @@ function App() {
     }, [pathname, hash, key]);
 
     return (
+        // @ts-ignore
         <ThemeProvider theme={currentTheme in selectTheme ? selectTheme[currentTheme] : themeLight}>
             <CssBaseline/>
 
@@ -82,6 +96,26 @@ function App() {
                             <Route path={View.Dev.path} element={<Dev/>}/>
                             <Route path={"*"} element={<Error code={404}/>}/>
                         </Routes>
+
+
+                        {
+                            // @ts-ignore
+                            featureFlags[FeatureFlag.THEME_SELECTOR] &&
+                            <Box position="fixed" right={5} bottom={5}>
+                                <Typography variant={"h6"}>Theme Selector</Typography>
+                                <FormControl fullWidth>
+                                    <Select
+                                        value={currentTheme}
+                                        label="Theme"
+                                        onChange={handleThemeChange}
+                                    >
+                                        {Object.keys(selectTheme).map((key, index) => (
+                                            <MenuItem value={key}>{key}</MenuItem>
+                                        ))}
+                                    </Select>
+                                </FormControl>
+                            </Box>
+                        }
                     </Container>
                 </WebsiteContext.Provider>
             </SessionContext.Provider>
