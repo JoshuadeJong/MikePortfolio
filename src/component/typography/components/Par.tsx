@@ -15,7 +15,7 @@ function Par(props: Props) {
     };
     return (
         <Typography
-            variant="body2"
+            variant="body1"
             sx={{
                 marginBottom: noMargin,
                 color: textColor,

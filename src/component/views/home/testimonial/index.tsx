@@ -35,7 +35,7 @@ function Testimonials() {
 
     return (
         <Section id={View.Home_Testimonial.getHash()}>
-            <Grid container spacing={2}>
+            <Grid container spacing={4}>
                 <Grid size={12}>
                     <SectionHeader>Why people love learning from me!</SectionHeader>
                 </Grid>

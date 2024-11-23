@@ -20,7 +20,7 @@ function DesktopLink(props: Props) {
             sx={{
                 pl: 3,
                 pr: 3,
-                color: "text.secondary",
+                color: "text.primary",
                 textTransform: "capitalize",
                 zLevel: 200,
             }}

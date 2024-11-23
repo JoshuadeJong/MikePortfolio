@@ -7,10 +7,15 @@ class FeatureFlag {
         isDev,
         "Enable the feature flag override page for the website."
     );
-    static readonly THEME_SELECTOR = new FeatureFlag(
+    static readonly Theme_Selector = new FeatureFlag(
         "Theme Selector",
         isDev,
         "A floating theme selector on all pages"
+    )
+    static readonly Section_Head_Horizontal_Line = new FeatureFlag(
+        "Section Head Horizontal Line",
+        true,
+        "A horizontal line line",
     )
 
     static readonly Page_Contact = new FeatureFlag(

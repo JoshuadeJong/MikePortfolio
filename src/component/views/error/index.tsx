@@ -1,5 +1,6 @@
 import React from "react";
-import {Container, Grid} from "@mui/material";
+import {Container} from "@mui/material";
+import Grid from '@mui/material/Grid2';
 import {Center} from "../../layout";
 import {Par, SectionText} from "../../typography";
 
@@ -23,17 +24,17 @@ function Error(props: Props) {
 
     return (
         <Container maxWidth={"md"}>
-            <Center minHeight={"50vh"}>
+            <Center minHeight={"100vh"}>
                 <Grid container spacing={2} sx={{textAlign: "center"}}>
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <SectionText>{code} error</SectionText>
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Par>{messages[code]}</Par>
                     </Grid>
                 </Grid>
                 {children && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         {children}
                     </Grid>
                 )}

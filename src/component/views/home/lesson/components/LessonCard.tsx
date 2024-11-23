@@ -21,7 +21,7 @@ function LessonCard(props: Props) {
     };
 
     return (
-        <Card sx={{minHeight: 400, display: "flex", flexDirection: 'column'}}>
+        <Card sx={{minHeight: 500, display: "flex", flexDirection: 'column'}}>
             <CardContent>
                 <Typography sx={{fontSize: 14}} color="text.secondary" gutterBottom>
                     {title}

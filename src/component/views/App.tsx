@@ -25,6 +25,7 @@ import View from "../../type/View";
 import Dev from "./dev";
 import {Page} from "../layout";
 import Home from './home';
+import Footer from "./footer";
 
 function App() {
     const [currentTheme, setCurrentTheme] = React.useState<string>("light");
@@ -84,6 +85,7 @@ function App() {
             >
                 <WebsiteContext.Provider value={WebsiteContent}>
                     <Header/>
+                    <Footer/>
                     <Container maxWidth="lg" sx={{paddingTop: 16}}>
                         <Routes>
                             <Route
@@ -96,27 +98,27 @@ function App() {
                             <Route path={View.Dev.path} element={<Dev/>}/>
                             <Route path={"*"} element={<Error code={404}/>}/>
                         </Routes>
-
-
-                        {
-                            // @ts-ignore
-                            featureFlags[FeatureFlag.THEME_SELECTOR] &&
-                            <Box position="fixed" right={5} bottom={5}>
-                                <Typography variant={"h6"}>Theme Selector</Typography>
-                                <FormControl fullWidth>
-                                    <Select
-                                        value={currentTheme}
-                                        label="Theme"
-                                        onChange={handleThemeChange}
-                                    >
-                                        {Object.keys(selectTheme).map((key, index) => (
-                                            <MenuItem value={key}>{key}</MenuItem>
-                                        ))}
-                                    </Select>
-                                </FormControl>
-                            </Box>
-                        }
                     </Container>
+                    <Footer/>
+
+                    {
+                        // @ts-ignore
+                        featureFlags[FeatureFlag.Theme_Selector] &&
+                        <Box position="fixed" right={5} bottom={5} sx={{backgroundColor: "white"}}>
+                            <Typography variant={"h6"}>Theme Selector</Typography>
+                            <FormControl fullWidth>
+                                <Select
+                                    value={currentTheme}
+                                    label="Theme"
+                                    onChange={handleThemeChange}
+                                >
+                                    {Object.keys(selectTheme).map((key, index) => (
+                                        <MenuItem value={key}>{key}</MenuItem>
+                                    ))}
+                                </Select>
+                            </FormControl>
+                        </Box>
+                    }
                 </WebsiteContext.Provider>
             </SessionContext.Provider>
         </ThemeProvider>

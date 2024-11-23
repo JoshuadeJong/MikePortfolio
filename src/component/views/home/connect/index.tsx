@@ -18,9 +18,9 @@ function Connect() {
     return (
         <Section id={View.Home_Contact.getHash()}>
             <Container maxWidth="sm" disableGutters>
-                <Grid container spacing={2}>
+                <Grid container spacing={4}>
                     <Grid size={12}>
-                        <SectionHeader>Let's connect!</SectionHeader>
+                        <SectionHeader line={"none"}>Let's connect!</SectionHeader>
                     </Grid>
                     <Grid size={12} sx={{textAlign: "center"}}>
                         <Par>{contact.connectActionMessage}</Par>

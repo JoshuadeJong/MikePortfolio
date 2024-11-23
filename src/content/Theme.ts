@@ -44,36 +44,68 @@ let themeLight = createTheme({
     palette: {
         mode: "light",
         primary: {
-            main: "#00baff",
+            main: "#000",
+        },
+        secondary: {
+            main: "#00baff"
         },
         text: {
-            secondary: "#828282",
+            primary: "#000",
+            secondary: "#656565",
         },
         background: {
             default: "#f8f8f8",
             paper: "#fff",
         },
     },
-    typography: typography,
+    typography: typography
 });
 themeLight = responsiveFontSizes(themeLight);
 
+// @ts-ignore
 let themeBrown = createTheme({
     palette: {
         mode: "dark",
         primary: {
-            main: "#00baff",
+            light: "#ad7370",
+            main: "#7E1723",
+        },
+        secondary: {
+            main: "#7e1723",
         },
         text: {
-            primary: "#D4D4D6",
-            secondary: "#C79360",
+            primary: "#000",
+            secondary: "#656565",
         },
         background: {
-            default: "#08243B",
-            paper: "#5E6F7C",
+            default: "#dbcebd",
+            paper: "#eae8d6",
         },
     },
-    typography: typography,
+    typography: {
+        ...typography,
+        fontFamily: "Rowdies",
+        h4: {
+            fontSize: "2.25rem",
+            fontWeight: 800,
+        },
+        h6: {
+            fontSize: "1.25rem",
+            fontWeight: 600,
+        },
+        body1: {
+            fontSize: "1rem",
+            fontWeight: 400,
+            lineHeight: "1.8",
+            letterSpacing: "0.01071em",
+        },
+        body2: {
+            fontSize: "1rem",
+            fontWeight: 400,
+            lineHeight: "1.43",
+            letterSpacing: "0.01071em",
+        }
+    }
 })
 themeBrown = responsiveFontSizes(themeBrown);
 

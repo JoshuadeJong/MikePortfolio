@@ -1,5 +1,6 @@
 import React from "react";
-import {Box, Grid} from "@mui/material";
+import {Box} from "@mui/material";
+import Grid from '@mui/material/Grid2';
 import WebsiteContext from "../../../../provider/WebsiteContext";
 import {Center, MGrid, Section} from "../../../layout";
 import View from "../../../../type/View";
@@ -24,11 +25,11 @@ function About() {
 
     return (
         <Section id={View.Home_About.getHash()}>
-            <Grid container spacing={2}>
-                <Grid item xs={12}>
+            <Grid container spacing={4}>
+                <Grid size={12}>
                     <SectionHeader>Here is a bit about me!</SectionHeader>
                 </Grid>
-                <Grid item sm={12} md={6}>
+                <Grid size={{xs:12, md:6}}>
                     <div ref={photoRef}>
                         {about.map((text, index) => {
                             return (
@@ -39,7 +40,7 @@ function About() {
                         })}
                     </div>
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid size={{xs:12, md:6}}>
                     <Center minHeight={`${photoHeight}px`}>
                         <Box width="369px" height="553px" >
                             <MGrid row={12} column={12}>
@@ -57,7 +58,7 @@ function About() {
                                             width: "100%",
                                             height: "100%",
                                             outlineStyle: "solid",
-                                            outlineColor: "#00c7ff",
+                                            outlineColor: "secondary.main",
                                             outlineWidth: "thick",
                                         }}
                                     />
@@ -76,9 +77,8 @@ function About() {
                                         sx={{
                                             width: "100%",
                                             height: "100%",
-                                            backgroundColor: "green",
+                                            backgroundColor: "secondary.main",
                                         }}
-                                        alt=""
                                         src={mike1}
                                     />
                                 </Box>
