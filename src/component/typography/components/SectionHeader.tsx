@@ -1,9 +1,6 @@
 import React from "react";
 import {Box} from "@mui/material";
-
 import SectionText from "./SectionText";
-import SessionContext from "../../../provider/SessionContext";
-import FeatureFlag from "../../../type/FeatureFlag";
 
 type Props = {
     line?: "all" | "sm" | "md" | "none";
@@ -15,7 +12,6 @@ function SectionHeader(props: Props) {
         ...props,
         line: props.line || "all",
     };
-    const {featureFlags} = React.useContext(SessionContext);
 
     return (
         <>
@@ -30,18 +26,12 @@ function SectionHeader(props: Props) {
                 }}
             >
                 <SectionText display="block">{children}</SectionText>
-
-                {
-                    // @ts-ignore
-                    featureFlags[FeatureFlag.Section_Head_Horizontal_Line] ?
-                        <Box sx={{
-                            display: line === "all" || line === "sm" ? "block" : "none",
-                            height: "4px",
-                            backgroundColor: "primary.main",
-                            marginTop: "8px",
-                        }}/> : <></>
-                }
-
+                <Box sx={{
+                    display: line === "all" || line === "sm" ? "block" : "none",
+                    height: "2px",
+                    backgroundColor: "primary.main",
+                    marginTop: "10px",
+                }}/>
             </Box>
 
             {/* Desktop View */}
@@ -56,19 +46,15 @@ function SectionHeader(props: Props) {
                 }}
             >
                 <SectionText display="inline-block">{children}</SectionText>
-                {
-                    // @ts-ignore
-                    featureFlags[FeatureFlag.Section_Head_Horizontal_Line] ?
-                        <Box
-                            sx={{
-                                display: line === "all" || line === "md" ? "flex" : "none",
-                                flex: 1,
-                                height: "4px",
-                                backgroundColor: "secondary.main",
-                                marginLeft: "32px",
-                            }}
-                        /> : <></>
-                }
+                <Box
+                    sx={{
+                        display: line === "all" || line === "md" ? "flex" : "none",
+                        flex: 1,
+                        height: "2px",
+                        backgroundColor: "secondary.main",
+                        marginLeft: "32px",
+                    }}
+                />
             </Box>
         </>
     );

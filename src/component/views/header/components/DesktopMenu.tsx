@@ -121,7 +121,7 @@ function DesktopMenu(props: Props) {
                                                             }}
                                                         >
                                                             <ListItemIcon>
-                                                                <subView.icon sx={{color: "primary.main", backgroundColor: "primary.main"}}/>
+                                                                <subView.icon sx={{color: "primary.main"}}/>
                                                             </ListItemIcon>
                                                             <ListItemText
                                                                 primary={subView.displayName}

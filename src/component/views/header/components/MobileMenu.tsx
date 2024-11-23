@@ -73,7 +73,7 @@ function MobileMenu(props: Props) {
                                     }}
                                 >
                                     {view.icon != null ? <ListItemIcon>
-                                        <view.icon/>
+                                        <view.icon sx={{color: "primary.main"}}/>
                                     </ListItemIcon> : null}
                                     <ListItemText primary={view.displayName}/>
                                 </ListItemButton>
@@ -110,7 +110,7 @@ function MobileMenu(props: Props) {
                                                 sx={{paddingLeft: 4}}
                                             >
                                                 <ListItemIcon>
-                                                    <subView.icon/>
+                                                    <subView.icon sx={{color: "primary.main"}}/>
                                                 </ListItemIcon>
                                                 <ListItemText primary={subView.displayName}/>
                                             </ListItemButton>

@@ -67,10 +67,8 @@ function Header() {
     return (
         <HideOnScroll setIsHidden={setIsHidden}>
             <AppBar
-                color="transparent"
                 sx={{
-                    backdropFilter: "blur(20px)",
-                    backgroundColor: "background.transparent",
+                    backgroundColor: "background.default",
                 }}
             >
                 <Container maxWidth="xl">
@@ -81,6 +79,7 @@ function Header() {
                                     variant="h4"
                                     sx={{
                                         textWrap: "nowrap",
+                                        color: "text.primary",
                                     }}
                                 >
                                     {website.name}

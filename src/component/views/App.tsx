@@ -13,7 +13,7 @@ import {
 import {Navigate, Route, Routes, useLocation} from "react-router-dom";
 
 import FeatureFlag from "../../type/FeatureFlag";
-import {selectTheme, themeLight} from "../../content/Theme";
+import {selectTheme, themeBrown} from "../../content/Theme";
 import SessionContext from "../../provider/SessionContext";
 import WebsiteContext from "../../provider/WebsiteContext";
 import WebsiteContent from "../../content/WebsiteContent";
@@ -28,7 +28,7 @@ import Home from './home';
 import Footer from "./footer";
 
 function App() {
-    const [currentTheme, setCurrentTheme] = React.useState<string>("light");
+    const [currentTheme, setCurrentTheme] = React.useState<string>("brown");
     const [featureFlags, setFeatureFlags] = React.useState(() => {
         let tempObject = {};
         FeatureFlag.values().forEach(
@@ -71,7 +71,7 @@ function App() {
 
     return (
         // @ts-ignore
-        <ThemeProvider theme={currentTheme in selectTheme ? selectTheme[currentTheme] : themeLight}>
+        <ThemeProvider theme={currentTheme in selectTheme ? selectTheme[currentTheme] : themeBrown}>
             <CssBaseline/>
 
             <SessionContext.Provider
@@ -85,7 +85,6 @@ function App() {
             >
                 <WebsiteContext.Provider value={WebsiteContent}>
                     <Header/>
-                    <Footer/>
                     <Container maxWidth="lg" sx={{paddingTop: 16}}>
                         <Routes>
                             <Route
