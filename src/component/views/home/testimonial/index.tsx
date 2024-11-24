@@ -48,6 +48,7 @@ function Testimonials() {
                             {testimonials.map((testimonial, index) => {
                                 return (
                                     <Box
+                                        key={"TestimonialCard" + index}
                                         sx={{
                                             width: "100%",
                                             marginLeft: "auto",

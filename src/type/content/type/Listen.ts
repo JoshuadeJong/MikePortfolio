@@ -6,7 +6,9 @@ type Album = {
 }
 
 type Youtube = {
+    title: string;
     link: string;
+    videoId: string;
     description: string;
 }
 

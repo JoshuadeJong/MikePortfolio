@@ -37,7 +37,7 @@ function Lesson() {
                             <div ref={photoRef}>
                                 {lesson.info.map((text, index) => {
                                     return (
-                                        <Par>
+                                        <Par key={"lessonPar"+index}>
                                             {text}
                                         </Par>
                                     );
@@ -69,8 +69,8 @@ function Lesson() {
                     </Grid>
                     <Grid container size={12} spacing={4}>
                         {
-                            lesson.options.map((option) => (
-                                <Grid size={{xs: 12, md: 4}}>
+                            lesson.options.map((option, index) => (
+                                <Grid size={{xs: 12, md: 4}} key={"lessonRates"+index}>
                                     <LessonCard
                                         title={option.title}
                                         price={option.price}

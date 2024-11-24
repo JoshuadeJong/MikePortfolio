@@ -1,5 +1,6 @@
 import {Button, Card, CardActions, CardContent, List, ListItem, Typography} from "@mui/material";
 import React from "react";
+
 import WebsiteContext from "../../../../../provider/WebsiteContext";
 
 
@@ -23,13 +24,13 @@ function LessonCard(props: Props) {
     return (
         <Card sx={{minHeight: 500, display: "flex", flexDirection: 'column'}}>
             <CardContent>
-                <Typography sx={{fontSize: 14}} color="text.secondary" gutterBottom>
+                <Typography sx={{fontSize: 14, color: "text.secondary"}} gutterBottom>
                     {title}
                 </Typography>
                 <Typography variant="h4" component="div">
                     {price}*
                 </Typography>
-                <Typography sx={{mb: 1.5}} color="text.secondary">
+                <Typography sx={{mb: 1.5, color: "text.secondary"}}>
                     {description}
                 </Typography>
                 <Typography variant="body2">
@@ -37,7 +38,7 @@ function LessonCard(props: Props) {
                 </Typography>
                 <List sx={{listStyleType: 'disc', paddingLeft: 2, paddingTop: 0, paddingBottom: 0}}>
                     {includes.map((item, index) => (
-                        <ListItem sx={{display: 'list-item', paddingTop: 0}}>
+                        <ListItem key={title + "includes" + index} sx={{display: 'list-item', paddingTop: 0}}>
                             {item}
                         </ListItem>
                     ))}

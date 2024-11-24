@@ -64,15 +64,21 @@ const WebsiteContent: WebsiteContentType = {
     listen: {
         personal: [
             {
+                title: "",
                 link: "https://youtube.com/embed/evgZX5v3Vwc",
+                videoId: "evgZX5v3Vwc",
                 description: "Here is a video clip of me performing for the earshot jazz festival in 2019"
             },
             {
+                title: "",
                 link: "https://www.youtube.com/embed/l8BYIDufyjs",
+                videoId: "l8BYIDufyjs",
                 description: "Here is a video of me performing for a Hadley Caliman tribute concert alongside some of Seattle's finest musicians."
             },
             {
+                title: "",
                 link: "https://www.youtube.com/embed/HZSjO5LTLgE",
+                videoId: "HZSjO5LTLgE",
                 description: "Here is a video of me performing at The 2022 Lakedale Jazz Festival with Delvon Lamarr and Max Holmberg",
             }
         ],

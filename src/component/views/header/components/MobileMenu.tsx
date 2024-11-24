@@ -1,5 +1,6 @@
 import React from "react";
 import {
+    Box,
     Button,
     Collapse,
     Divider,
@@ -62,8 +63,8 @@ function MobileMenu(props: Props) {
                         backgroundColor: "background.default",
                     }}
                 >
-                    {mainViews.map((view) => (
-                        <>
+                    {mainViews.map((view, index) => (
+                        <Box key={"mobileMainView"+index}>
                             <ListItem disablePadding>
                                 <ListItemButton
                                     onClick={() => {
@@ -99,8 +100,8 @@ function MobileMenu(props: Props) {
                                 unmountOnExit
                             >
                                 <List component="div" disablePadding>
-                                    {subViews.get(view)?.map((subView) => (
-                                        <ListItem disablePadding>
+                                    {subViews.get(view)?.map((subView,index) => (
+                                        <ListItem disablePadding key={"mobileSubView"+index}>
                                             <ListItemButton
                                                 onClick={() => {
                                                     setIsSectionOpen(null);
@@ -119,7 +120,7 @@ function MobileMenu(props: Props) {
                                 </List>
                                 <Divider/>
                             </Collapse>
-                        </>
+                        </Box>
                     ))}
                 </List>
             </SwipeableDrawer>
