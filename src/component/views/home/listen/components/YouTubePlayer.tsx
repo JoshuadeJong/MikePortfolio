@@ -19,8 +19,7 @@ function YouTubePlayer(props: Props) {
     React.useEffect(() => {
         const updateWindowDimensions = () => {
             if (videoFrameRef.current && videoPlayerReady) {
-
-                setVideoPlayerHeight(videoFrameRef.current?.offsetHeight);
+                setVideoPlayerHeight(videoFrameRef.current?.offsetWidth * 9/16);
             }
         };
 
