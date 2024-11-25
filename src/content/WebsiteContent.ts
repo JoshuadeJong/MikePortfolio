@@ -59,7 +59,7 @@ const WebsiteContent: WebsiteContentType = {
                 ],
             }
         ],
-        optionsCallback: "Ready to book now or unsure what type of lesson is best for you? Reach out to me and we can figure it out!"
+        optionsCallback: "Unsure what type of lesson is best for you? Reach out to me and we can figure it out!"
     },
     listen: {
         personal: [

@@ -5,7 +5,7 @@ import {Page} from "../../layout";
 import Testimonials from "./testimonial";
 import Lesson from "./lesson";
 import Connect from "./connect";
-import Listen from "./listen";
+import Listen from "./performances";
 
 
 function Home() {

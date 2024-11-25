@@ -36,10 +36,10 @@ class View {
         Diversity1Icon,
         "/home#Testimonials"
     );
-    static readonly Home_Listen = new View(
-        "Listen",
+    static readonly Home_Performance = new View(
+        "Performance",
         MusicNoteIcon,
-        "/home#Listen"
+        "/home#Performance"
     );
     static readonly Home_Contact = new View(
         "Contact",
@@ -65,7 +65,7 @@ class View {
     static readonly Lesson_Listen = new View(
         "Listen",
         LibraryMusicIcon,
-        "/lesson/listen"
+        "/lesson/performances"
     )
 
     static readonly Testimonial = new View(

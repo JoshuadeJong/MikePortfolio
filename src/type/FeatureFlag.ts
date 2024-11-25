@@ -41,7 +41,7 @@ class FeatureFlag {
     static readonly Page_Lesson_Listen = new FeatureFlag(
         "Page Listen",
         isDev,
-        "Enable the lesson listen page for the website."
+        "Enable the lesson performances page for the website."
     )
 
     constructor(

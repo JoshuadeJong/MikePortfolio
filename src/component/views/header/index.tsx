@@ -34,7 +34,7 @@ function Header() {
                 View.Home_About,
                 View.Home_Testimonial,
                 View.Home_Lessons,
-                View.Home_Listen,
+                View.Home_Performance,
                 View.Home_Contact,
             ],
         ],
