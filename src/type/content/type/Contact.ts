@@ -1,9 +1,10 @@
 type Contact = {
-    email: string;
     namePersonFirst: string;
     namePersonFull: string;
     namePersonLast: string;
-    phone: string;
+    location: string;
+    email: string;
+    emailToken: string;
     youtube: string;
     connectActionMessage: string;
 }

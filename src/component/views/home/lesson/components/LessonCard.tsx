@@ -1,7 +1,9 @@
-import {Button, Card, CardActions, CardContent, List, ListItem, Typography} from "@mui/material";
 import React from "react";
+import {Button, Card, CardActions, CardContent, List, ListItem, Typography} from "@mui/material";
+import {useNavigate} from "react-router-dom";
 
-import WebsiteContext from "../../../../../provider/WebsiteContext";
+import View from "../../../../../type/View";
+import ContactReasonEnum from "../../../../../type/ContactReasonEnum";
 
 
 type Props = {
@@ -15,11 +17,12 @@ function LessonCard(props: Props) {
     const {
         title, price, description, includes
     } = props;
-    const {contact} = React.useContext(WebsiteContext);
 
-    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-        window.open(`mailto:${contact.email}`);
-    };
+    const navigate = useNavigate();
+    const handleClick = React.useCallback(
+        () => navigate(View.Contact.path, {replace: false, state: {subject: ContactReasonEnum.LessonRequest}}),
+        [navigate]
+    );
 
     return (
         <Card sx={{minHeight: 500, display: "flex", flexDirection: 'column'}}>
@@ -36,7 +39,14 @@ function LessonCard(props: Props) {
                 <Typography variant="body2">
                     Includes:
                 </Typography>
-                <List sx={{listStyleType: 'disc', paddingLeft: 2, paddingTop: 0, paddingBottom: 0}}>
+                <List
+                    sx={{
+                        listStyleType: 'disc',
+                        paddingLeft: 2,
+                        paddingTop: 0,
+                        paddingBottom: 0,
+                    }}
+                >
                     {includes.map((item, index) => (
                         <ListItem key={title + "includes" + index} sx={{display: 'list-item', paddingTop: 0}}>
                             {item}
@@ -44,7 +54,7 @@ function LessonCard(props: Props) {
                     ))}
                 </List>
             </CardContent>
-            <CardActions sx={{marginTop: "auto"}}>
+            <CardActions sx={{marginTop: "auto", padding: 2}}>
                 <Button variant={"outlined"} onClick={handleClick}>
                     Book Now
                 </Button>

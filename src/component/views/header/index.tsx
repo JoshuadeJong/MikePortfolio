@@ -68,7 +68,7 @@ function Header() {
         <HideOnScroll setIsHidden={setIsHidden}>
             <AppBar
                 sx={{
-                    backgroundColor: "background.default",
+                    backgroundColor: "background.dark",
                 }}
             >
                 <Container maxWidth="xl">

@@ -26,6 +26,7 @@ import Dev from "./dev";
 import {Page} from "../layout";
 import Home from './home';
 import Footer from "./footer";
+import Contact from "./contact";
 
 function App() {
     const [currentTheme, setCurrentTheme] = React.useState<string>("brown");
@@ -85,7 +86,7 @@ function App() {
             >
                 <WebsiteContext.Provider value={WebsiteContent}>
                     <Header/>
-                    <Container maxWidth="lg" sx={{paddingTop: 16}}>
+                    <Container maxWidth="xl" sx={{paddingTop: 16, minHeight: '85vh'}}>
                         <Routes>
                             <Route
                                 path="/"
@@ -97,7 +98,7 @@ function App() {
                             />
                             <Route path={View.Home.path} element={<Home/>}/>
                             <Route path={View.Lesson.path} element={<Page>Lesson</Page>}/>
-                            <Route path={View.Contact.path} element={<Page>Contact</Page>}/>
+                            <Route path={View.Contact.path} element={<Contact/>}/>
                             <Route path={View.Dev.path} element={<Dev/>}/>
                             <Route path={"*"} element={<Error code={404}/>}/>
                         </Routes>

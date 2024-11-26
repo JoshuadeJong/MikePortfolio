@@ -1,5 +1,12 @@
 import {createTheme, responsiveFontSizes} from "@mui/material";
 
+declare module '@mui/material/styles' {
+    interface TypeBackground  {
+        dark: string;
+    }
+}
+
+
 let themeBrown = createTheme({
     palette: {
         mode: "dark",
@@ -15,6 +22,7 @@ let themeBrown = createTheme({
             secondary: "#656565",
         },
         background: {
+            dark: "#ccb698",
             default: "#dbcebd",
             paper: "#eae8d6",
         },
@@ -57,6 +65,26 @@ let themeBrown = createTheme({
             lineHeight: "1.43",
             letterSpacing: "0.01071em",
         },
+    },
+    components: {
+        MuiTextField: {
+            defaultProps: {
+                fullWidth: true,
+                variant: "outlined",
+            },
+            styleOverrides: {
+                root: {
+                    backgroundColor: "#fbfaf7",
+                }
+            }
+        },
+        MuiSelect: {
+            styleOverrides: {
+                root: {
+                    backgroundColor: "#fbfaf7",
+                }
+            }
+        }
     }
 })
 themeBrown = responsiveFontSizes(themeBrown);

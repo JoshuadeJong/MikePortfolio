@@ -7,13 +7,17 @@ import WebsiteContext from "../../../../provider/WebsiteContext";
 import {Section} from "../../../layout";
 import View from "../../../../type/View";
 import {Par, SectionHeader} from "../../../typography";
+import {useNavigate} from "react-router-dom";
+import ContactReasonEnum from "../../../../type/ContactReasonEnum";
 
 function Connect() {
     const {contact} = React.useContext(WebsiteContext);
 
-    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-        window.open(`mailto:${contact.email}`);
-    };
+    const navigate = useNavigate();
+    const handleClick = React.useCallback(
+        () => navigate(View.Contact.path, {replace: false, state: {subject: ContactReasonEnum.Other}}, ),
+        [navigate]
+    );
 
     return (
         <Section id={View.Home_Contact.getHash()}>

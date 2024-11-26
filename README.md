@@ -1,6 +1,33 @@
-# Getting Started with Create React App
+# Owner Info
+// TODO
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Dev Info
+If you are a developer working on this project here is what you need to know!
+
+## Tech Stack
+This website is developed using the following technologies/libraries/frameworks/3d party tools. 
+
+- Typescript
+- React https://react.dev/
+- Material UI https://mui.com/material-ui/
+- Github Pages https://pages.github.com/
+- Web3Froms https://web3forms.com
+- reCAPTCHA https://www.google.com/recaptcha/about/
+
+Other libraries can be found in the `package.json`.
+
+## Hosting
+
+Hosting is managed by Github Pages on the `gh-pages` branch.
+From here Github will host the build and use the custom domain.
+There is currently  no Github Action to build and deploy from main, instead you must use the `npm run deploy` script.
+
+The domain is managed by //TODO
+
+## Feature Flag
+All feature flags are defined in `src/type/FeatureFlag.ts` and can be toggled locally at `http://localhost:3000/dev`.
+There is also a Theme Selector feature flag to previous potential theme changes. Feature use their default value in production,
+however you can configure dev only feature flags with the `isDev` value. 
 
 ## Available Scripts
 
@@ -13,6 +40,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+#### Help!
+When I run `npm start` I see the following error code
+
+```Error: error:0308010C:digital envelope routines::unsupported```
+
+For now just run `export NODE_OPTIONS=--openssl-legacy-provider` and rerun `npm start`
 
 ### `npm test`
 
@@ -39,7 +73,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Deploy to Github Pages
+### Deploy to Github Pages
 
 Push the React app to the GitHub repository
 
@@ -52,18 +86,3 @@ Under the hood, the predeploy script will build a distributable version of the R
 By default, the new commit on the gh-pages branch will have a commit message of "Updates". You can specify a custom commit message via the -m option, like this:
 
 $ npm run deploy -- -m "Deploy React app to GitHub Pages"
-
-## HELP!
-
-When I run `npm start` I see the following error code
-
-```Error: error:0308010C:digital envelope routines::unsupported```
-
-For now just run `export NODE_OPTIONS=--openssl-legacy-provider` and rerun `npm start`
-
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

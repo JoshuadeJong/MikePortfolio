@@ -1,6 +1,5 @@
-import {Box, Container} from "@mui/material";
+import {Box} from "@mui/material";
 import banner from "../../../assets/images/banner.jpg"
-import {Center} from "../../layout";
 
 
 function Footer() {
@@ -8,7 +7,7 @@ function Footer() {
     return (
         <Box
             width="100%"
-            height="300px"
+            height="15vh"
             sx={{
                 backgroundColor: "primary.main",
                 backgroundImage: `url(${banner})`,
