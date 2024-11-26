@@ -13,11 +13,6 @@ class FeatureFlag {
         "A floating theme selector on all pages"
     )
 
-    static readonly Page_Contact = new FeatureFlag(
-        "Page Contact",
-        isDev,
-        "Enable the contact page for the website."
-    )
     static readonly Page_Review = new FeatureFlag(
         "Page Review",
         isDev,

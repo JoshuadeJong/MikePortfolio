@@ -21,9 +21,8 @@ function Header() {
         ...(featureFlags[FeatureFlag.Page_Lesson] ? [View.Lesson] : []),
         // @ts-ignore
         ...(featureFlags[FeatureFlag.Page_Review] ? [View.Testimonial] : []),
-        // @ts-ignore
-        ...(featureFlags[FeatureFlag.Page_Contact] ? [View.Contact] : []),
-        // @ts-ignore
+        View.Contact,
+    // @ts-ignore
         ...(featureFlags[FeatureFlag.DEV] ? [View.Dev] : []),
     ];
 
