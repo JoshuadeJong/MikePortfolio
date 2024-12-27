@@ -5,6 +5,7 @@ import {
 } from "@mui/material";
 import PlaceIcon from '@mui/icons-material/Place';
 import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
 
 import {Page} from "../../layout";
 import WebsiteContext from "../../../provider/WebsiteContext";
@@ -12,7 +13,6 @@ import Form from "./components/Form";
 import {useLocation} from "react-router-dom";
 import ContactReasonEnum from "../../../type/ContactReasonEnum";
 import {SectionHeader} from "../../typography";
-import * as repl from "node:repl";
 
 
 const ContactBox = styled('div')({
@@ -51,12 +51,17 @@ function Contact() {
                                 marginBottom: 4,
                             }}
                         >
-                            Fill out the form or email me and I will get back to you as soon as possible.
+                            {contact.connectActionMessage}
                         </Typography>
 
                         <ContactBox>
                             <PlaceIcon color="primary" fontSize={"large"} sx={{marginRight: 4}}/>
                             {contact.location}
+                        </ContactBox>
+
+                        <ContactBox>
+                            <PhoneIcon color="primary" fontSize={"large"}  sx={{marginRight: 4}}/>
+                            {contact.phone}
                         </ContactBox>
 
                         <ContactBox>

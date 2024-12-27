@@ -72,7 +72,6 @@ function Testimonials() {
                     }}/>
                 </Grid>
                 <Grid size={12} display="flex" justifyContent="center" alignItems="center">
-
                     <Button onClick={() => handleCLick()}>
                         {!expanded ? "Read More Reviews" : "Read Less Reviews"}
                     </Button>

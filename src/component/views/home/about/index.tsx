@@ -6,6 +6,7 @@ import {Center, Section} from "../../../layout";
 import View from "../../../../type/View";
 import {Par, SectionHeader} from "../../../typography";
 import mike1 from "../../../../assets/images/mike1.jpg"
+import HyperLink from "../../../typography/components/HyperLink";
 
 function About() {
     const {about} = React.useContext(WebsiteContext);
@@ -31,13 +32,20 @@ function About() {
                 </Grid>
                 <Grid size={{xs:12, md:6}}>
                     <div ref={photoRef}>
-                        {about.map((text, index) => {
+                        {about.text.map((text, index) => {
                             return (
                                 <Box key={`about-par-${index}`}>
                                     <Par>{text}</Par>
                                 </Box>
                             );
                         })}
+                        <Box>
+                            <HyperLink
+                                url={about.learnMoreLink}
+                            >
+                                {about.learnMoreText}
+                            </HyperLink>
+                        </Box>
                     </div>
                 </Grid>
                 <Grid size={{xs:12, md:6}}>

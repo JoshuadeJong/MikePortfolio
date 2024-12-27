@@ -2,24 +2,29 @@ import WebsiteContentType from "../type/content/WebsiteContentType";
 
 const WebsiteContent: WebsiteContentType = {
     website: {
-        name: "Mike Eskenazi",
+        name: "Michael Eskenazi",
     },
     contact: {
-        namePersonFull: "Mike Eskenazi",
+        namePersonFull: "Michael Eskenazi",
         namePersonFirst: "Mike",
         namePersonLast: "Eskenazi",
         location: "Ballard, Seattle, WA",
-        email: "michaelsknz16@gmail.com",
+        email: "bluefireguitar07@gmail.com",
+        phone: "206 814 9390",
         emailToken: "1a753769-0cb0-424b-93cc-b99d30e753a4",
         youtube: "https://www.youtube.com/@DolphLundgrenix6909",
-        connectActionMessage: "Although I’m not currently looking for any new opportunities, I'm always open to hearing about them. Whether you have a question or just want to say hi, I’ll try my best to get back to you!",
+        connectActionMessage: "I'm currently accepting students of all levels, from beginners to advanced. Whether you're looking to learn the basic or improve your skills, I'm here to help. I’m also available for gigs and performances—feel free to reach out if you'd like to collaborate! Let's connect and make music together.",
     },
-    about: [
-        "My name is Michael Eskenazi, I'm a professional guitarist working in the industry since 2012. After Graduation from Ballard High School in Seattle, Washington I was offered a scholarship to New School for Jazz and Contemporary Music, and moved to New York City to pursue music.",
-        "During my time in New York I studied with and was mentored by some of the finest musicians this planet has to offer. Some of those musicians include: Bruce Edwards, Charles Tolliver, Jimmy Owens, Vic Juris, Ed Cherry and Onaje Allan Gumbs, all of whom helped shape and mold my musical outlook and style.",
-        "I gained a great amount of professional musical experience while in New York City playing everywhere from churches, private parties, weddings, festivals, jazz clubs and everything in between. Playing in such a wide variety of settings has helped me to be able to fit the needs of what ever musical setting I find myself in and how to sustain myself as a musician making a living in a place with the most talented and abundant amount of musicians in the world. I was also employed as a teacher at the Brooklyn Conservatory of Music and the Fred Astaire Dance studio.",
-        "I am currently residing in the Seattle area where I am an active teacher and a core member of Gary Hammons group Last Of The Tribe."
-    ],
+    about: {
+        text: [
+            "My name is Michael Eskenazi, I'm a professional guitarist working in the industry since 2012. After Graduation from Ballard High School in Seattle, Washington I was offered a scholarship to New School for Jazz and Contemporary Music, and moved to New York City to pursue music.",
+            "During my time in New York I studied with and was mentored by some of the finest musicians this planet has to offer. Some of those musicians include: Bruce Edwards, Charles Tolliver, Jimmy Owens, Vic Juris, Ed Cherry and Onaje Allan Gumbs, all of whom helped shape and mold my musical outlook and style.",
+            "I gained a great amount of professional musical experience while in New York City playing everywhere from churches, private parties, weddings, festivals, jazz clubs and everything in between. Playing in such a wide variety of settings has helped me to be able to fit the needs of what ever musical setting I find myself in and how to sustain myself as a musician making a living in a place with the most talented and abundant amount of musicians in the world. I was also employed as a teacher at the Brooklyn Conservatory of Music and the Fred Astaire Dance studio.",
+            "I am currently residing in the Seattle area where I am an active teacher and a core member of Gary Hammons group Last Of The Tribe.",
+        ],
+        learnMoreText: "Learn more about me in my interview with Jazz Guitar Today!",
+        learnMoreLink: "https://jazzguitartoday.com/2024/07/jgt-talks-to-seattles-michael-eskenazi/",
+    },
     lesson: {
         info: [
             "Teaching is one of my passions! Molding to your learning style is valuable and effective. Too often I see musicians focused on teaching the instrument in hand versus encompassing the overall principles of learning music. I incorporate a holistic approach by teaching the basic elements of music, including but not limited to: ear training, rhythm, tone, dynamics and harmony.",
@@ -29,35 +34,37 @@ const WebsiteContent: WebsiteContentType = {
         ],
         options: [
             {
-                title: "Introduction Lesson",
-                price: "$45",
-                description: "A quick 30 minute lesson!",
-                includes: [
-                    "Talk about music goals",
-                    "Come up with a lesson plan",
-                ],
-            },
-            {
-                title: "Beginner Student",
+                title: "Aspiring Musician",
                 price: "$200/mo",
-                description: "30 minutes each week over 4 weeks.",
+                description: "60 minutes every other week.",
                 includes: [
+                    "In person lessons at your house or mine",
                     "Playing your favorite Jazz, Rock, or Blues songs",
                     "Learn Rhythm Guitar and Solo Guitar",
-                    "Basic techniques, Scales & Chords",
+                    "Basic techniques, Scales & Chords"
                 ],
             },
             {
-                title: "Advance Student",
-                price: "$400/mo",
+                title: "Seasoned Musician",
+                price: "$380/mo",
                 description: "60 minutes each week over 4 weeks.",
                 includes: [
+                    "In person lessons at your house or mine",
                     "Learn to comp in different jam settings",
                     "Improvise over complex chord progression",
                     "Create and learn Chord Melodies",
-                    "Ear training & transcribing",
                     "Advance techniques, Scales & Chords",
+                    "Ear training & transcribing"
                 ],
+            },
+            {
+                title: "Master Class",
+                price: "$120/hr",
+                description: "60 minute Master Class with your Band",
+                includes: [
+                    "Musical critique for each member of the group",
+                    ""
+                ]
             }
         ],
         optionsCallback: "Unsure what type of lesson is best for you? Reach out to me and we can figure it out!"

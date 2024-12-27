@@ -65,6 +65,13 @@ let themeBrown = createTheme({
             lineHeight: "1.43",
             letterSpacing: "0.01071em",
         },
+        overline: {
+            fontSize: ".6rem",
+            fontWeight: 200,
+            lineHeight: ".05rem",
+            letterSpacing: "0.01071em",
+            textTransform: "none",
+        }
     },
     components: {
         MuiTextField: {

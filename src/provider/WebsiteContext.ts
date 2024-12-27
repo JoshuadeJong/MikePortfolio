@@ -3,12 +3,17 @@ import WebsiteContentType from "../type/content/WebsiteContentType";
 
 
 const WebsiteContext = React.createContext<WebsiteContentType>({
-    about: [],
+    about: {
+        text: [],
+        learnMoreText: "",
+        learnMoreLink: "",
+    },
     contact: {
         namePersonFull: "",
         namePersonFirst: "",
         namePersonLast: "",
         email: "",
+        phone: "",
         emailToken: "",
         location: "",
         youtube: "",
