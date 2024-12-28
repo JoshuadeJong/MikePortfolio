@@ -87,11 +87,13 @@ function App() {
                 <WebsiteContext.Provider value={WebsiteContent}>
                     <Box
                         sx={{
-                            minHeight: "100vh"
+                            minHeight: "100vh",
+                            display: "flex",
+                            flexDirection: "column"
                         }}
                     >
                         <Header/>
-                        <Container maxWidth="xl" sx={{paddingTop: 16, minHeight: '85vh'}}>
+                        <Container maxWidth="xl" sx={{paddingTop: 16, minHeight: "95vh"}}>
                             <Routes>
                                 <Route
                                     path="/"
@@ -108,7 +110,7 @@ function App() {
                                 <Route path={"*"} element={<Error code={404}/>}/>
                             </Routes>
                         </Container>
-                        <Footer/>
+                        <Footer minHeight={"5vh"}/>
                     </Box>
 
                     {
