@@ -60,10 +60,13 @@ const WebsiteContent: WebsiteContentType = {
             {
                 title: "Master Class",
                 price: "$120/hr",
-                description: "60 minute Master Class with your Band",
+                description: "60 minute Master Class with your band.",
                 includes: [
-                    "Musical critique for each member of the group",
-                    ""
+                    "Techniques for cohesive ensemble playing and communication",
+                    "Mastering phrasing and articulation as a group",
+                    "Improvisation skills for soloing and accompanying within the group",
+                    "Developing dynamics and group interaction",
+                    "Advice for live performance, set list, and equipment"
                 ]
             }
         ],
