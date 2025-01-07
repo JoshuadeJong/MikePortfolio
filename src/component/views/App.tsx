@@ -93,7 +93,7 @@ function App() {
                         }}
                     >
                         <Header/>
-                        <Container maxWidth="xl" sx={{paddingTop: 16, minHeight: "95vh"}}>
+                        <Container maxWidth="xl" sx={{paddingTop: 16, minHeight: "90vh"}}>
                             <Routes>
                                 <Route
                                     path="/"
@@ -110,7 +110,7 @@ function App() {
                                 <Route path={"*"} element={<Error code={404}/>}/>
                             </Routes>
                         </Container>
-                        <Footer minHeight={"5vh"}/>
+                        <Footer minHeight={"10vh"}/>
                     </Box>
 
                     {

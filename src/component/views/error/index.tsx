@@ -24,7 +24,7 @@ function Error(props: Props) {
 
     return (
         <Container maxWidth={"md"}>
-            <Center minHeight={"100vh"}>
+            <Center minHeight={"90vh"}>
                 <Grid container spacing={2} sx={{textAlign: "center"}}>
                     <Grid size={12}>
                         <SectionText>{code} error</SectionText>
