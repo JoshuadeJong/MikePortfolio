@@ -11,7 +11,7 @@ const WebsiteContent: WebsiteContentType = {
         location: "Ballard, Seattle, WA",
         email: "bluefireguitar07@gmail.com",
         phone: "206 814 9390",
-        emailToken: "1a753769-0cb0-424b-93cc-b99d30e753a4",
+        emailToken: "626c5f68-202a-4367-a8b6-5e6e1fcac9cc",
         youtube: "https://www.youtube.com/@DolphLundgrenix6909",
         connectActionMessage: "I'm currently accepting students of all levels, from beginners to advanced. Whether you're looking to learn the basic or improve your skills, I'm here to help. I’m also available for gigs and performances—feel free to reach out if you'd like to collaborate! Let's connect and make music together.",
     },
