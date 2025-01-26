@@ -8,7 +8,7 @@ const WebsiteContent: WebsiteContentType = {
         namePersonFull: "Michael Eskenazi",
         namePersonFirst: "Mike",
         namePersonLast: "Eskenazi",
-        location: "Ballard, Seattle, WA",
+        location: "Seattle, WA",
         email: "bluefireguitar07@gmail.com",
         phone: "206 814 9390",
         emailToken: "626c5f68-202a-4367-a8b6-5e6e1fcac9cc",
