@@ -99,10 +99,6 @@ function App() {
                                     path="/"
                                     element={<Navigate to={View.Home.path} replace/>}
                                 />
-                                <Route // Reroute for github pages
-                                    path="/MikePortfolio"
-                                    element={<Navigate to={View.Home.path} replace/>}
-                                />
                                 <Route path={View.Home.path} element={<Home/>}/>
                                 <Route path={View.Lesson.path} element={<Page>Lesson</Page>}/>
                                 <Route path={View.Contact.path} element={<Contact/>}/>

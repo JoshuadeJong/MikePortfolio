@@ -1,7 +1,7 @@
 {
-  "name": "mike",
+  "name": "mike_portfolio",
   "version": "0.1.0",
-  "homepage": "https://JoshuadeJong.github.io/MikePortfolio",
+  "homepage": "https://JoshuadeJong.github.io",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.13.0",
