@@ -1,8 +1,8 @@
 import React from "react";
 import {Box, Paper} from "@mui/material";
 import Rating from '@mui/material/Rating';
-import Testimonial from "../../../../../type/content/type/Testimonial";
-import {Par} from "../../../../typography";
+import Testimonial from "../../../../type/content/type/Testimonial";
+import {Par} from "../../../typography";
 
 
 type Props = {
@@ -15,7 +15,7 @@ function TestimonialCard(props: Props) {
         <Paper elevation={3}>
             <Box sx={{padding: 2}}>
                 <Rating value={5} readOnly/>
-                <Par textColor="text.primary">{testimonial.text}</Par>
+                <Par textColor="text.primary" whiteSpace="pre-wrap">{testimonial.text}</Par>
                 <Par noMargin>
                     - {testimonial.person}
                 </Par>

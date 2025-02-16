@@ -1,26 +1,20 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import Grid from "@mui/material/Grid2";
-import {Box, Button, IconButton, Typography, styled} from "@mui/material";
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import EmailIcon from '@mui/icons-material/Email';
-import PhoneIcon from '@mui/icons-material/Phone';
+import {Box, Button, Typography} from "@mui/material";
 
 import banner from "../../../assets/images/banner.jpg"
 import Content from "../../../provider/WebsiteContext";
 import View from "../../../type/View";
 import FeatureFlag from "../../../type/FeatureFlag";
 import SessionContext from "../../../provider/SessionContext";
+import PlaceIcon from "@mui/icons-material/Place";
+import PhoneIcon from "@mui/icons-material/Phone";
+import EmailIcon from "@mui/icons-material/Email";
 
 type Props = {
     minHeight: string
 }
-
-const IconButtonStyle = {
-    marginLeft: 2.5,
-    color: "text.primary",
-    backgroundColor: 'transparent'
-};
 
 function Footer(props: Props) {
     const {featureFlags} = React.useContext(SessionContext);
@@ -32,7 +26,9 @@ function Footer(props: Props) {
         // @ts-ignore
         ...(featureFlags[FeatureFlag.Page_Lesson] ? [View.Lesson] : []),
         // @ts-ignore
-        ...(featureFlags[FeatureFlag.Page_Review] ? [View.Testimonial] : []),
+        View.Testimonial,
+        // @ts-ignore
+        ...(featureFlags[FeatureFlag.Page_Frequently_Asked_Questions] ? [View.Frequently_Ask_Questions] : []),
         View.Contact,
     ];
 
@@ -100,7 +96,12 @@ function Footer(props: Props) {
                         </Button>
                     ))}
                 </Grid>
-                <Grid size={12}>
+                <Grid
+                    size={12}
+                    sx={{
+                        marginBottom: 1,
+                    }}
+                >
                     <Box
                         sx={{
                             display: "flex",
@@ -110,7 +111,63 @@ function Footer(props: Props) {
                         }}
                     />
                 </Grid>
-                <Grid size={12}>
+                <Grid
+                    size={3}
+                    sx={{
+                        display: {xs: "none", md: "block"},
+                        marginBottom: "4px",
+                    }}
+                >
+                    <Typography
+                        variant={"overline"}
+                    >
+                        © 2024 {website.name}. All rights reserved.
+                    </Typography>
+                </Grid>
+                <Grid
+                    size={{xs: 12, md: 9}}
+                    sx={{
+                        display: "flex",
+                        justifyContent: {sx: "flex-start", md: "flex-end"},
+                        flexWrap: "wrap",
+                    }}
+                >
+                    {
+                        [
+                            {text: contact.location, icon: <PlaceIcon color="primary" fontSize={"small"} sx={{marginRight: 1}}/>},
+                            {text: contact.phone, icon: <PhoneIcon color="primary" fontSize={"small"}  sx={{marginRight: 1}}/>},
+                            {text: contact.email, icon: <EmailIcon color="primary" fontSize={"small"}  sx={{marginRight: 1}}/>}
+                        ].map((element, index) => (
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    flexDirection: "row",
+                                    alignItems: "center",
+                                    paddingLeft: 0,
+                                    marginTop: "0px",
+                                    marginBottom: "0px",
+                                    whiteSpace: "pre-wrap",
+                                    flexWrap: "nowrap",
+                                    marginLeft: {xs: "0px", md: "24px"},
+                                    marginRight: {xs: "24px", md: "0px"},
+                                }}
+                            >
+                                {element.icon}
+                                <Typography variant={"caption"}>
+                                    {element.text}
+                                </Typography>
+                            </Box>
+
+                        ))
+                    }
+                </Grid>
+                <Grid
+                    size={12}
+                    sx={{
+                        display: {xs: "block", md: "none"},
+                        marginBottom: "4px",
+                    }}
+                >
                     <Typography
                         variant={"overline"}
                     >

@@ -4,14 +4,16 @@ import {Typography} from "@mui/material";
 type Props = {
     noMargin?: boolean;
     textColor?: string;
+    whiteSpace?: string;
     children?: React.ReactNode;
 };
 
 function Par(props: Props) {
-    const {noMargin, textColor, children} = {
+    const {noMargin, textColor, whiteSpace, children} = {
         ...props,
         noMargin: props.noMargin ? "none" : "1rem",
         textColor: props.textColor || "text.primary",
+        whiteSpace: props.whiteSpace || "normal",
     };
     return (
         <Typography
@@ -19,6 +21,7 @@ function Par(props: Props) {
             sx={{
                 marginBottom: noMargin,
                 color: textColor,
+                whiteSpace: whiteSpace,
             }}
         >
             {children}

@@ -33,7 +33,8 @@ const WebsiteContext = React.createContext<WebsiteContentType>({
         favoriteAlbums: [],
         jazzRecommendation: [],
         bluesRecommendation: [],
-    }
+    },
+    faq: []
 })
 
 export default WebsiteContext;

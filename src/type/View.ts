@@ -12,7 +12,7 @@ import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
-
+import HelpIcon from '@mui/icons-material/Help';
 
 class View {
     static readonly Home = new View("Home", HomeIcon, "/home");
@@ -68,6 +68,12 @@ class View {
         "/lesson/performances"
     )
 
+    static readonly Frequently_Ask_Questions = new View(
+        "FAQ",
+        HelpIcon,
+        "/faq"
+    )
+
     static readonly Testimonial = new View(
         "Reviews",
         Diversity1Icon,
@@ -81,6 +87,7 @@ class View {
     )
 
     static readonly Dev = new View("Dev", FlagIcon, "/dev");
+    static readonly DevNotFound = new View("DevNotFound", FlagIcon, "/devNotFound");
 
     constructor(
         readonly displayName: string,

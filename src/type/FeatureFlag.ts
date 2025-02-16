@@ -13,11 +13,6 @@ class FeatureFlag {
         "A floating theme selector on all pages"
     )
 
-    static readonly Page_Review = new FeatureFlag(
-        "Page Review",
-        isDev,
-        "Enable the review page for the website."
-    )
     static readonly Page_Lesson = new FeatureFlag(
         "Page Lesson",
         isDev,
@@ -37,6 +32,11 @@ class FeatureFlag {
         "Page Listen",
         isDev,
         "Enable the lesson performances page for the website."
+    )
+    static readonly Page_Frequently_Asked_Questions = new FeatureFlag(
+        "Page Frequently Asked Questions",
+        isDev,
+        "Enable the Frequently Asked Questions page for the website."
     )
 
     constructor(
