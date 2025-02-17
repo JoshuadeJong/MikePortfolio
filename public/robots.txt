@@ -1,3 +1,5 @@
 # https://www.robotstxt.org/robotstxt.html
+Sitemap: https://www.michaeleskenazi1.com/sitemap.txt
+
 User-agent: *
 Allow: /
