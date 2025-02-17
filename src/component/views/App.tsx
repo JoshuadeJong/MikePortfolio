@@ -27,6 +27,8 @@ import {Page} from "../layout";
 import Home from './home';
 import Footer from "./footer";
 import Contact from "./contact";
+import FAQ from "./faq";
+import Testimonial from "./testimonial";
 
 function App() {
     const [currentTheme, setCurrentTheme] = React.useState<string>("brown");
@@ -102,6 +104,8 @@ function App() {
                                 <Route path={View.Home.path} element={<Home/>}/>
                                 <Route path={View.Lesson.path} element={<Page>Lesson</Page>}/>
                                 <Route path={View.Contact.path} element={<Contact/>}/>
+                                <Route path={View.Testimonial.path} element={<Testimonial/>}/>
+                                <Route path={View.Frequently_Ask_Questions.path} element={<FAQ/>} />
                                 <Route path={View.Dev.path} element={<Dev/>}/>
                                 <Route path={"*"} element={<Error code={404}/>}/>
                             </Routes>

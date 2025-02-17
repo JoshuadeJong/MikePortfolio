@@ -18,7 +18,7 @@ import DesktopLink from "./DesktopLinks";
 type Props = {
     mainViews: Array<View>;
     subViews: Map<View, Array<View>>;
-    handleLinkClick: (path: string, replace: boolean) => void;
+    handleLinkClick: (path: string) => void;
     isHidden: boolean;
 };
 
@@ -76,7 +76,7 @@ function DesktopMenu(props: Props) {
                     {/*  Menu Item */}
                     <Box ref={refs.current[index]} sx={{marginRight: 1}}>
                         <DesktopLink
-                            onClick={() => handleLinkClick(view.path, true)}
+                            onClick={() => handleLinkClick(view.path)}
                             text={view.displayName + " "}
                             open={subViews.has(view) ? subMenuOpen === view : undefined}
                         />
@@ -111,7 +111,7 @@ function DesktopMenu(props: Props) {
                                                     <ListItem disablePadding>
                                                         <ListItemButton
                                                             onClick={() =>
-                                                                handleLinkClick(subView.path, false)
+                                                                handleLinkClick(subView.path)
                                                             }
                                                             sx={{
                                                                 paddingTop: 1,

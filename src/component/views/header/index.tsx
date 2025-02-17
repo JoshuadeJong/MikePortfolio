@@ -19,8 +19,9 @@ function Header() {
         View.Home,
         // @ts-ignore
         ...(featureFlags[FeatureFlag.Page_Lesson] ? [View.Lesson] : []),
+        View.Testimonial,
         // @ts-ignore
-        ...(featureFlags[FeatureFlag.Page_Review] ? [View.Testimonial] : []),
+        ...(featureFlags[FeatureFlag.Page_Frequently_Asked_Questions] ? [View.Frequently_Ask_Questions] : []),
         View.Contact,
     // @ts-ignore
         ...(featureFlags[FeatureFlag.DEV] ? [View.Dev] : []),
@@ -59,7 +60,7 @@ function Header() {
 
     const navigate = useNavigate();
     const handleLinkClick = React.useCallback(
-        (path: string, replace: boolean) => navigate(path, {replace: replace}),
+        (path: string) => navigate(path, {replace: false}),
         [navigate]
     );
 

@@ -70,7 +70,6 @@ function Contact() {
                         </ContactBox>
                     </Box>
 
-
                 </Grid>
                 <Grid size={{xs:12, md:6}}>
                     <Form
@@ -101,7 +100,6 @@ function Contact() {
                             <Grid size={12}>
                                 <TextField required name={"message"} label={"Message"} type="text" multiline rows={6}/>
                             </Grid>
-
                         </Grid>
                     </Form>
                 </Grid>

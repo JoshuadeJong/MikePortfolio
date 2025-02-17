@@ -21,7 +21,7 @@ import View from "../../../../type/View";
 type Props = {
     mainViews: Array<View>;
     subViews: Map<View, Array<View>>;
-    handleLinkClick: (path: string, replace: boolean) => void;
+    handleLinkClick: (path: string) => void;
 };
 
 function MobileMenu(props: Props) {
@@ -70,7 +70,7 @@ function MobileMenu(props: Props) {
                                     onClick={() => {
                                         setIsSectionOpen(null);
                                         setIsMenuOpen(false);
-                                        handleLinkClick(view.path, true);
+                                        handleLinkClick(view.path);
                                     }}
                                 >
                                     {view.icon != null ? <ListItemIcon>
@@ -106,7 +106,7 @@ function MobileMenu(props: Props) {
                                                 onClick={() => {
                                                     setIsSectionOpen(null);
                                                     setIsMenuOpen(false);
-                                                    handleLinkClick(subView.path, true);
+                                                    handleLinkClick(subView.path);
                                                 }}
                                                 sx={{paddingLeft: 4}}
                                             >
