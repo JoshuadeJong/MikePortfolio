@@ -29,6 +29,7 @@ import Footer from "./footer";
 import Contact from "./contact";
 import FAQ from "./faq";
 import Testimonial from "./testimonial";
+import Lesson from "./lesson";
 
 function App() {
     const [currentTheme, setCurrentTheme] = React.useState<string>("brown");
@@ -102,7 +103,7 @@ function App() {
                                     element={<Navigate to={View.Home.path} replace/>}
                                 />
                                 <Route path={View.Home.path} element={<Home/>}/>
-                                <Route path={View.Lesson.path} element={<Page>Lesson</Page>}/>
+                                <Route path={View.Lesson.path} element={<Lesson/>}/>
                                 <Route path={View.Contact.path} element={<Contact/>}/>
                                 <Route path={View.Testimonial.path} element={<Testimonial/>}/>
                                 <Route path={View.Frequently_Ask_Questions.path} element={<FAQ/>} />

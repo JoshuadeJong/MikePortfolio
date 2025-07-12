@@ -5,7 +5,7 @@ import View from "../../../../type/View";
 import {Box, Typography} from "@mui/material";
 import Grid from '@mui/material/Grid2';
 import {Par, SectionHeader} from "../../../typography";
-import LessonCard from "./components/LessonCard";
+import LessonCard from "../../lesson/components/LessonCard";
 import WebsiteContext from "../../../../provider/WebsiteContext";
 import mike2 from "../../../../assets/images/mike2.jpg";
 
@@ -76,6 +76,7 @@ function Lesson() {
                                         price={option.price}
                                         description={option.description}
                                         includes={option.includes}
+                                        enabled={option.enabled}
                                     />
                                 </Grid>
                             ))

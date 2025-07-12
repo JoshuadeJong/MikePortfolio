@@ -126,6 +126,30 @@ const TestimonialContent: Testimonial[] = [
     {
         text: "Making the decision to study with mike was one of the best things I could have done for both my musicianship, and my life. While studying under him I discovered my love for guitar and jazz music and he opened my eyes to the wide array of possibilities of artistry and self expression that had such a profound impact on me that I decided to go to berklee college of music to pursue a carrer in jazz. Mike has served as a mentor for me in this process and I dont know what I would be today without his influence on my life. Mike is an amazing person and could not recommend taking lessons from him enough.",
         person: "R.S Savage"
+    },
+    {
+        text: "Mike is an outstanding guitar instructor who has helped my student grow into a confident and skilled musician, especially in jazz. His guidance has had a huge impact on their development. In addition to private instruction, Mike has worked with my small student jazz ensembles, helping them refine their skills and become stronger as a jazz combo. Highly recommend Mike for anyone looking for top-tier guitar instruction!",
+        person: "Zachariah MacIntyre"
+    },
+    {
+        text: "Mike is an excellent teacher who focuses not on just rote memorization of songs, but on core technique. I'd been learning on my own for a year or so before reaching out to him, and I saw immediate and consistent improvements even after the very first lesson. The things I used to struggle a great deal with are barely afterthoughts anymore thanks to him. He doesn't just know what he's talking about; he'll make sure that you do, too.",
+        person: "Lilith Trout"
+    },
+    {
+        text: "I am delighted to share our experience with Mike, who has been teaching guitar to my 4-year-old son. Mike’s exceptional patience and flexibility have made the learning process enjoyable and engaging for my child. He has a unique ability to connect with young learners, making each lesson both fun and educational. My son eagerly anticipates his sessions with Mike, and it’s heartwarming to see his enthusiasm for music grow. I highly recommend Mike to any parent seeking a dedicated and talented guitar instructor for their child.",
+        person: "Roger Younan"
+    },
+    {
+        text: "Really good teacher, what I learned helped my playing a lot. Super nice guy too. I would definitely recommend Mike.",
+        person: "Finian Burnworth"
+    },
+    {
+        text: "I've been taking lessons with Michael for over a year now, and I couldn't be happier with my progress. He has helped me expand my chord vocabulary, deepen my foundational knowledge of music theory (with clever tricks to remember key concepts), and develop confidence in my strumming and general play. His teaching style is patient, engaging, and tailored to my goals, always providing thoughtful answers to any questions I have.",
+        person: "Daniel Lee"
+    },
+    {
+        text: "Mike is a great teacher! My playing and general knowledge of jazz has advanced incredibly from taking lessons with Mike. He's been able to curate the ocean of information on jazz guitar and break it down to it's fundamentals, giving me a solid foundation needed to play with others, attend jam sessions, and perform in ensembles.",
+        person: "Samuel Robinette"
     }
 ]
 

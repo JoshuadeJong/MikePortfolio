@@ -44,6 +44,7 @@ const WebsiteContent: WebsiteContentType = {
                     "Learn Rhythm Guitar and Solo Guitar",
                     "Basic techniques, Scales & Chords"
                 ],
+                enabled: false,
             },
             {
                 title: "Seasoned Musician",
@@ -57,10 +58,11 @@ const WebsiteContent: WebsiteContentType = {
                     "Advance techniques, Scales & Chords",
                     "Ear training & transcribing"
                 ],
+                enabled: true,
             },
             {
                 title: "Master Class",
-                price: "$120/hr",
+                price: "$160/hr",
                 description: "60 minute Master Class with your band.",
                 includes: [
                     "Techniques for cohesive ensemble playing and communication",
@@ -68,7 +70,8 @@ const WebsiteContent: WebsiteContentType = {
                     "Improvisation skills for soloing and accompanying within the group",
                     "Developing dynamics and group interaction",
                     "Advice for live performance, set list, and equipment"
-                ]
+                ],
+                enabled: true,
             }
         ],
         optionsCallback: "Unsure what type of lesson is best for you? Reach out to me and we can figure it out!"
