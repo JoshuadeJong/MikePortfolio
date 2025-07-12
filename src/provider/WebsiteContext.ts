@@ -22,7 +22,7 @@ const WebsiteContext = React.createContext<WebsiteContentType>({
     lesson: {
         info: [],
         options: [],
-        optionsCallback: ""
+        optionsCallback: "",
     },
     testimonials: [],
     website: {

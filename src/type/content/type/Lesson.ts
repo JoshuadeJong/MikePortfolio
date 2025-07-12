@@ -3,6 +3,7 @@ type LessonOption = {
     price: string,
     description: string,
     includes: Array<string>,
+    enabled: boolean,
 }
 
 type Lesson = {
