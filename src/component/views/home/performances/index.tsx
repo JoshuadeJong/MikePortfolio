@@ -37,7 +37,7 @@ function Listen() {
                                         onPause={() => {
                                             setShouldAutoSwitch(true);
                                         }}
-                                        onEnded={() => {
+                                        onEnd={() => {
                                             setShouldAutoSwitch(true);
                                         }}
                                     />

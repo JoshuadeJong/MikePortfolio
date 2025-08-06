@@ -2,29 +2,10 @@ import React from "react";
 import WebsiteContext from "../../../provider/WebsiteContext";
 import {Page} from "../../layout";
 import Grid from "@mui/material/Grid2";
-import {Accordion, AccordionDetails, AccordionSummary, Paper, styled, Typography} from "@mui/material";
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import {Typography} from "@mui/material";
 import {SectionHeader} from "../../typography";
 import QaAccordion from "./components/QaAccordion";
 import QA from "../../../type/content/type/QA";
-
-
-const StyledAccordion = styled(Accordion)(({ theme }) => ({
-    margin: theme.spacing(1, 0),
-    paperShadow: "0px 3px 3px -2px rgba(0,0,0,0.2)",
-    transition: "transform 0.2s ease-in-out",
-    "&:hover": {
-        transform: "translateY(-2px)"
-    }
-}));
-
-const StyledPaper = styled(Paper)(({ theme }) => ({
-    transition: "transform 0.2s ease-in-out",
-    "&:hover": {
-        transform: "translateY(-2px)"
-    }
-}))
-
 
 function FAQ() {
     const {faq} = React.useContext(WebsiteContext);

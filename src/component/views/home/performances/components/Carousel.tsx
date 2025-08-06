@@ -5,8 +5,6 @@ import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
 import {useKeenSlider} from "keen-slider/react";
 import "keen-slider/keen-slider.min.css"
 
-import CarouselArrow from "./CarouselArrow";
-
 type Props = {
     shouldAutoSwitch: boolean;
     switchRate: number;

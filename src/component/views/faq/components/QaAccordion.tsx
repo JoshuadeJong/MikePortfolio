@@ -1,4 +1,4 @@
-import {Accordion, AccordionDetails, AccordionSummary, Paper, styled, Typography} from "@mui/material";
+import {Accordion, AccordionDetails, AccordionSummary, styled, Typography} from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import React from "react";
 import makeUrlsClickable from "../../../../util/MakeUrlsClickable";
@@ -11,13 +11,6 @@ const StyledAccordion = styled(Accordion)(({ theme }) => ({
         transform: "translateY(-2px)"
     }
 }));
-
-const StyledPaper = styled(Paper)(({ theme }) => ({
-    transition: "transform 0.2s ease-in-out",
-    "&:hover": {
-        transform: "translateY(-2px)"
-    }
-}))
 
 type Props = {
     question: string;

@@ -1,4 +1,4 @@
-import {Box, Card, CardContent, CardMedia, Typography} from "@mui/material";
+import {Box, Card, CardMedia, Typography} from "@mui/material";
 
 import {useKeenSlider} from "keen-slider/react";
 import "keen-slider/keen-slider.min.css"
@@ -29,7 +29,7 @@ function PlaylistPlayer(props: Props) {
         return () => {
             window.removeEventListener('resize', updateWidth);
         };
-    }, []);
+    });
 
     const [sliderRef ] = useKeenSlider({
         loop: true,

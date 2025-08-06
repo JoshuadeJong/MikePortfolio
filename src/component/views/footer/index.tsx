@@ -24,7 +24,6 @@ function Footer(props: Props) {
         View.Home,
         // @ts-ignore
         ...(featureFlags[FeatureFlag.Page_Lesson] ? [View.Lesson] : []),
-        // @ts-ignore
         View.Testimonial,
         View.Frequently_Ask_Questions,
         View.Contact,

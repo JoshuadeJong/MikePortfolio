@@ -33,7 +33,7 @@ function Form (props: Props) {
         if (inferredContactReason !== ContactReasonEnum.Unknown) {
             setContactReason(inferredContactReason.name);
         }
-    },[])
+    }, [inferredContactReason])
 
     return (
         <>
