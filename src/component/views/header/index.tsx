@@ -20,8 +20,7 @@ function Header() {
         // @ts-ignore
         ...(featureFlags[FeatureFlag.Page_Lesson] ? [View.Lesson] : []),
         View.Testimonial,
-        // @ts-ignore
-        ...(featureFlags[FeatureFlag.Page_Frequently_Asked_Questions] ? [View.Frequently_Ask_Questions] : []),
+        View.Frequently_Ask_Questions,
         View.Contact,
     // @ts-ignore
         ...(featureFlags[FeatureFlag.DEV] ? [View.Dev] : []),

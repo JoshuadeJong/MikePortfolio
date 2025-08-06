@@ -3,7 +3,8 @@ type LessonOption = {
     price: string,
     description: string,
     includes: Array<string>,
-    enabled: boolean,
+    note: string,
+    soldOut: boolean,
 }
 
 type Lesson = {

@@ -5,7 +5,6 @@ import WebsiteContext from "../../../../provider/WebsiteContext";
 import {Center, Section} from "../../../layout";
 import View from "../../../../type/View";
 import {Par, SectionHeader} from "../../../typography";
-import mike1 from "../../../../assets/images/mike1.jpg"
 import HyperLink from "../../../typography/components/HyperLink";
 
 function About() {
@@ -58,7 +57,7 @@ function About() {
                                     height: "100%",
                                     backgroundColor: "secondary.main",
                                 }}
-                                src={mike1}
+                                src={"../images/mike1.jpg"}
                             />
                         </Box>
                     </Center>

@@ -29,12 +29,11 @@ const WebsiteContext = React.createContext<WebsiteContentType>({
         name: "",
     },
     listen: {
+        why: [],
         personal: [],
-        favoriteAlbums: [],
-        jazzRecommendation: [],
-        bluesRecommendation: [],
+        recommended: []
     },
-    faq: []
+    faq: {}
 })
 
 export default WebsiteContext;

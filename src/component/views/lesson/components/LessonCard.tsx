@@ -4,7 +4,7 @@ import {useNavigate} from "react-router-dom";
 
 import View from "../../../../type/View";
 import ContactReasonEnum from "../../../../type/ContactReasonEnum";
-import {TypeSpecimen} from "@mui/icons-material";
+import Grid from "@mui/material/Grid2";
 
 
 type Props = {
@@ -12,12 +12,13 @@ type Props = {
     price: string;
     description: string;
     includes: Array<string>;
-    enabled: boolean;
+    note: string;
+    soldOut: boolean;
 }
 
 function LessonCard(props: Props) {
     const {
-        title, price, description, includes, enabled
+        title, price, description, includes, note, soldOut
     } = props;
 
     const navigate = useNavigate();
@@ -27,30 +28,38 @@ function LessonCard(props: Props) {
     );
 
     return (
-        <Card sx={{minHeight: 400, display: "flex", flexDirection: 'column'}}>
+        <Card sx={{display: "flex", flexDirection: 'column'}}>
             <CardContent>
-                <Typography sx={{fontSize: 14, color: "text.secondary"}} gutterBottom>
-                    {title}
-                </Typography>
-                <Typography variant="h4" component="div">
-                    {price}*
+                <Grid container marginBottom={1.5}>
+                    <Grid size={10}>
+                        <Typography variant="h5">
+                            {title}
+                        </Typography>
+                    </Grid>
+                    <Grid size={2}>
+                        <Typography variant="h5" sx={{textAlign: "right"}}>
+                            {price}*
+                        </Typography>
+                    </Grid>
+                </Grid>
+
+                <Typography sx={{marginBottom: 1.5, color: "text.secondary"}}>
+                    {description}
                 </Typography>
                 <Box sx={{
-                    height: "400px",
+                    maxHeight: "400px",
                     overflowY: "auto",
                 }}>
-                    <Typography sx={{mb: 1.5, color: "text.secondary"}}>
-                        {description}
-                    </Typography>
-                    <Typography variant="body2">
+                    <Typography variant="body2" sx={{color: "text.secondary"}}>
                         Includes:
                     </Typography>
                     <List
                         sx={{
                             listStyleType: 'disc',
-                            paddingLeft: 2,
+                            paddingLeft: 4,
                             paddingTop: 0,
                             paddingBottom: 0,
+                            color: "text.secondary"
                         }}
                     >
                         {includes.map((item, index) => (
@@ -60,17 +69,20 @@ function LessonCard(props: Props) {
                         ))}
                     </List>
                 </Box>
+                <Typography sx={{color: "text.secondary"}}>
+                    {note}
+                </Typography>
             </CardContent>
-            <CardActions sx={{marginTop: "auto", padding: 2}}>
-                { getCardActions(handleClick, enabled)}
+            <CardActions sx={{marginTop: "auto", paddingLeft: 2, paddingRight: 2, paddingBottom: 2}}>
+                { getCardActions(handleClick, soldOut)}
             </CardActions>
         </Card>
     );
 }
 
-function getCardActions(onClick: () => void, enabled: boolean) {
+function getCardActions(onClick: () => void, soldOut: boolean) {
 
-    if (!enabled) {
+    if (soldOut) {
         return (
             <Button disabled={true}>
                 <Box sx={{color: "primary.main"}}>

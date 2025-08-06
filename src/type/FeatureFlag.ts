@@ -33,11 +33,6 @@ class FeatureFlag {
         isDev,
         "Enable the lesson performances page for the website."
     )
-    static readonly Page_Frequently_Asked_Questions = new FeatureFlag(
-        "Page Frequently Asked Questions",
-        isDev,
-        "Enable the Frequently Asked Questions page for the website."
-    )
 
     constructor(
         readonly name: string,

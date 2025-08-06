@@ -30,6 +30,7 @@ import Contact from "./contact";
 import FAQ from "./faq";
 import Testimonial from "./testimonial";
 import Lesson from "./lesson";
+import Listen from "./listen";
 
 function App() {
     const [currentTheme, setCurrentTheme] = React.useState<string>("brown");
@@ -96,7 +97,7 @@ function App() {
                         }}
                     >
                         <Header/>
-                        <Container maxWidth="xl" sx={{paddingTop: 16, minHeight: "90vh"}}>
+                        <Box sx={{paddingTop: 16, minHeight: "90vh"}}>
                             <Routes>
                                 <Route
                                     path="/"
@@ -104,13 +105,14 @@ function App() {
                                 />
                                 <Route path={View.Home.path} element={<Home/>}/>
                                 <Route path={View.Lesson.path} element={<Lesson/>}/>
+                                <Route path={View.Lesson_Listen.path} element={<Listen/>}/>
                                 <Route path={View.Contact.path} element={<Contact/>}/>
                                 <Route path={View.Testimonial.path} element={<Testimonial/>}/>
                                 <Route path={View.Frequently_Ask_Questions.path} element={<FAQ/>} />
                                 <Route path={View.Dev.path} element={<Dev/>}/>
                                 <Route path={"*"} element={<Error code={404}/>}/>
                             </Routes>
-                        </Container>
+                        </Box>
                         <Footer minHeight={"10vh"}/>
                     </Box>
 
