@@ -22,7 +22,7 @@ function Header() {
         View.Testimonial,
         View.Frequently_Ask_Questions,
         View.Contact,
-    // @ts-ignore
+        // @ts-ignore
         ...(featureFlags[FeatureFlag.DEV] ? [View.Dev] : []),
     ];
 

@@ -39,7 +39,7 @@ function DesktopMenu(props: Props) {
             setSubMenuOpenDebounced.clear();
             setSubMenuOpen(view);
         },
-        [subMenuOpen, setSubMenuOpen, setSubMenuOpenDebounced]
+        [setSubMenuOpen, setSubMenuOpenDebounced]
     );
     React.useEffect(() => {
         if (isHidden) {

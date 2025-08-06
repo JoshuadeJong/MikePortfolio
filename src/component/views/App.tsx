@@ -1,7 +1,6 @@
 import React from 'react';
 import {
     Box,
-    Container,
     CssBaseline,
     FormControl,
     MenuItem,
@@ -23,7 +22,6 @@ import Header from "./header";
 import Error from "./error";
 import View from "../../type/View";
 import Dev from "./dev";
-import {Page} from "../layout";
 import Home from './home';
 import Footer from "./footer";
 import Contact from "./contact";

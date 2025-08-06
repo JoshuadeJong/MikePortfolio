@@ -7,11 +7,11 @@ type Props = {
     title: string
     onPlay(): void,
     onPause(): void,
-    onEnded(): void,
+    onEnd(): void,
 }
 
 function YouTubePlayer(props: Props) {
-    const {videoId, title, onPlay, onPause, onEnded} = props;
+    const {videoId, title, onPlay, onPause, onEnd} = props;
     const videoFrameRef = React.createRef<HTMLDivElement>();
     const [videoPlayerHeight, setVideoPlayerHeight] = React.useState(0);
     const [videoPlayerReady, setVideoPlayerReady] = React.useState(false);
@@ -45,7 +45,7 @@ function YouTubePlayer(props: Props) {
                 onReady={() => setVideoPlayerReady(true)}
                 onPlay={onPlay}
                 onPause={onPause}
-                onEnded={onEnded}
+                onEnd={onEnd}
                 opts={{
                   width: "100%",
                   height: `${videoPlayerHeight}px`
