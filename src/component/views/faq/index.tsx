@@ -5,6 +5,8 @@ import Grid from "@mui/material/Grid2";
 import {Accordion, AccordionDetails, AccordionSummary, Paper, styled, Typography} from "@mui/material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {SectionHeader} from "../../typography";
+import QaAccordion from "./components/QaAccordion";
+import QA from "../../../type/content/type/QA";
 
 
 const StyledAccordion = styled(Accordion)(({ theme }) => ({
@@ -33,36 +35,31 @@ function FAQ() {
                 <Grid size={12}>
                     <SectionHeader>Frequently Asked Questions</SectionHeader>
                 </Grid>
-
-                <Grid size={12}>
-                    {faq.map((qa, index) => {
-                        return (
-                            <StyledAccordion>
-                                <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon sx={{color: "text.primary"}}/>}
-                                    aria-controls={`panel${index}-content`}
-                                    id={`panel${index}-header`}
-                                    sx={{
-                                        "& .MuiAccordionSummary-content": {
-                                            margin: "16px 0"
-                                        }
-                                    }}
-                                >
-                                    <Typography variant="h6" sx={{ fontWeight: 500 }}>
-                                        {qa.question}
-                                    </Typography>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                    <Typography sx={{ color: "text.secondary" }}>
-                                        {qa.answer}
-                                    </Typography>
-                                </AccordionDetails>
-                            </StyledAccordion>
-                        )
-                    })}
-                </Grid>
+                {
+                    Object.entries(faq).map(([key, value]) => (
+                        unpackItem(key, value)
+                    ))
+                }
             </Grid>
         </Page>
+    )
+}
+
+function unpackItem(key: string, values: QA[]) {
+    return (
+        <Grid container size={12} spacing={2}>
+            <Grid size={12}>
+                <Typography variant={"h5"} sx={{}}>{key}</Typography>
+            </Grid>
+
+            <Grid size={12}>
+                {values.map((qa, index) => {
+                    return (
+                        <QaAccordion question={qa.question} answer={qa.answer} />
+                    )
+                })}
+            </Grid>
+        </Grid>
     )
 }
 

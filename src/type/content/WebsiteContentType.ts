@@ -13,7 +13,7 @@ type WebsiteContentType = {
     testimonials: Array<Testimonial>,
     website: WebsiteMeta,
     listen: Listen,
-    faq: Array<QA>,
+    faq: {[key: string]:  QA[]},
 }
 
 export default WebsiteContentType;

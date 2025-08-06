@@ -3,7 +3,6 @@ import {useNavigate} from "react-router-dom";
 import Grid from "@mui/material/Grid2";
 import {Box, Button, Typography} from "@mui/material";
 
-import banner from "../../../assets/images/banner.jpg"
 import Content from "../../../provider/WebsiteContext";
 import View from "../../../type/View";
 import FeatureFlag from "../../../type/FeatureFlag";
@@ -27,8 +26,7 @@ function Footer(props: Props) {
         ...(featureFlags[FeatureFlag.Page_Lesson] ? [View.Lesson] : []),
         // @ts-ignore
         View.Testimonial,
-        // @ts-ignore
-        ...(featureFlags[FeatureFlag.Page_Frequently_Asked_Questions] ? [View.Frequently_Ask_Questions] : []),
+        View.Frequently_Ask_Questions,
         View.Contact,
     ];
 
@@ -45,7 +43,7 @@ function Footer(props: Props) {
             sx={{
                 borderTop: '4px solid',
                 borderColor: 'secondary.main',
-                backgroundImage: `url(${banner})`,
+                backgroundImage: `url(../images/banner.jpg)`,
                 backgroundColor: "rgba(208,188,161,0.45)",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",

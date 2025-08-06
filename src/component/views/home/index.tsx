@@ -7,16 +7,17 @@ import Lesson from "./lesson";
 import Connect from "./connect";
 import Listen from "./performances";
 
-
 function Home() {
     return (
-        <Page>
-            <About/>
-            <Testimonials/>
-            <Lesson/>
-            <Listen/>
-            <Connect/>
-        </Page>
+        <>
+            <Page noPadding={true}>
+                <About/>
+                <Testimonials/>
+                <Lesson/>
+                <Listen/>
+                <Connect/>
+            </Page>
+        </>
     );
 }
 

@@ -1,9 +1,4 @@
-type Album = {
-    name: string;
-    imagePath: string;
-    youtube: string;
-    spotify: string;
-}
+import Playlist from "./Playlist";
 
 type Youtube = {
     title: string;
@@ -13,10 +8,9 @@ type Youtube = {
 }
 
 type Listen = {
+    why: Array<String>;
     personal: Array<Youtube>;
-    favoriteAlbums: Array<Album>;
-    jazzRecommendation: Array<Album>;
-    bluesRecommendation: Array<Album>;
+    recommended: Array<Playlist>;
 }
 
 export default Listen;

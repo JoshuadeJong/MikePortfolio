@@ -65,7 +65,7 @@ class View {
     static readonly Lesson_Listen = new View(
         "Listen",
         LibraryMusicIcon,
-        "/lesson/performances"
+        "/lesson/listen"
     )
 
     static readonly Frequently_Ask_Questions = new View(
