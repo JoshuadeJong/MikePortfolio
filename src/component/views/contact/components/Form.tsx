@@ -21,7 +21,7 @@ type Props = {
     name?: string;
     description?: string;
     inferredContactReason: ContactReasonEnum;
-    children?: JSX.Element;
+    children?: React.ReactNode;
 }
 
 function Form (props: Props) {
