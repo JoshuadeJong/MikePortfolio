@@ -24,6 +24,20 @@ There is currently  no Github Action to build and deploy from main, instead you 
 
 The domain is managed by //TODO
 
+## SEO & Static Pages
+
+To improve Google's ability to index the site, static HTML versions of key pages are generated in the `public` directory. These pages:
+- Contain semantic HTML with essential content for search engines
+- Load the full React app when JavaScript is enabled
+- Provide a fallback experience for users without JavaScript
+
+Static pages are automatically generated during deployment. To generate manually:
+```bash
+npm run generate-static
+```
+
+See `scripts/README.md` for more details.
+
 ## Feature Flag
 All feature flags are defined in `src/type/FeatureFlag.ts` and can be toggled locally at `http://localhost:3000/dev`.
 There is also a Theme Selector feature flag to previous potential theme changes. Feature use their default value in production,
