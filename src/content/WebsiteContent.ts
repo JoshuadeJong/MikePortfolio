@@ -52,7 +52,37 @@ const WebsiteContent: WebsiteContentType = {
                 soldOut: false,
             }
         ],
-        optionsCallback: "Unsure if lessons are right for you? Reach out and we can figure it out!"
+        optionsCallback: "Unsure if lessons are right for you? Reach out and we can figure it out!",
+        exampleLesson: {
+            videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            description: "Watch a sample lesson covering jazz chord voicings and improvisation techniques. This example demonstrates my teaching approach and how we break down complex concepts into manageable steps."
+        },
+        recommendedListening: [
+            {
+                title: "Kind of Blue",
+                artist: "Miles Davis",
+                description: "A masterpiece of modal jazz that every guitarist should study. Listen to how the musicians interact and create space in their solos.",
+                imagePath: "../images/records/art1.jpeg",
+                youtubeUrl: "https://www.youtube.com/watch?v=kbxtYqA6ypM",
+                spotifyUrl: "https://open.spotify.com/album/1weenld61qoidwYuZ1GESA"
+            },
+            {
+                title: "Undercurrent",
+                artist: "Bill Evans & Jim Hall",
+                description: "An intimate duo album showcasing the beautiful interplay between piano and guitar. Essential listening for understanding jazz harmony and melodic development.",
+                imagePath: "../images/records/art2.jpeg",
+                youtubeUrl: "https://www.youtube.com/watch?v=example",
+                spotifyUrl: "https://open.spotify.com/album/4q3OFVKNhTXXHqXLqGhKqO"
+            },
+            {
+                title: "Smokin' at the Half Note",
+                artist: "Wes Montgomery",
+                description: "Live recordings featuring Wes Montgomery's incredible octave technique and melodic improvisation. A must-study for any jazz guitarist.",
+                imagePath: "../images/records/art3.jpeg",
+                youtubeUrl: "https://www.youtube.com/watch?v=example2",
+                spotifyUrl: "https://open.spotify.com/album/3qsf5wHBGqpiVXZQc9H7KJ"
+            }
+        ]
     },
     listen: ListenContent,
     testimonials: TestimonialContent,

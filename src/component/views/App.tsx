@@ -29,6 +29,7 @@ import FAQ from "./faq";
 import Testimonial from "./testimonial";
 import Lesson from "./lesson";
 import Listen from "./listen";
+import Material from "./material";
 
 function App() {
     const [currentTheme, setCurrentTheme] = React.useState<string>("brown");
@@ -104,6 +105,7 @@ function App() {
                                 <Route path={View.Home.path} element={<Home/>}/>
                                 <Route path={View.Lesson.path} element={<Lesson/>}/>
                                 <Route path={View.Lesson_Listen.path} element={<Listen/>}/>
+                                <Route path={View.Lesson_Material.path} element={<Material/>}/>
                                 <Route path={View.Contact.path} element={<Contact/>}/>
                                 <Route path={View.Testimonial.path} element={<Testimonial/>}/>
                                 <Route path={View.Frequently_Ask_Questions.path} element={<FAQ/>} />
