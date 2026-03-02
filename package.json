@@ -31,7 +31,7 @@
     "start-network": "react-scripts start",
     "build": "react-scripts build && npm run generate-static",
     "generate-static": "npx tsx scripts/generate-static-pages.ts",
-    "minify": "node scripts/minify-build.js",
+    "minify": "npx tsx scripts/minify-build.ts",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
