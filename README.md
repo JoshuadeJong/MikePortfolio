@@ -43,6 +43,20 @@ All feature flags are defined in `src/type/FeatureFlag.ts` and can be toggled lo
 There is also a Theme Selector feature flag to previous potential theme changes. Feature use their default value in production,
 however you can configure dev only feature flags with the `isDev` value. 
 
+## How to test
+Running this project in develop mode is not enough to determine if deploying is safe. 
+Please run the application as if in production by running the following
+
+```
+npm install serve -g
+npm run predeploy
+serve -s build
+```
+
+The server will attempt to run on port 3000. Once the service running do the following to confirm your update works.
+
+1. Verify all 
+
 ## Available Scripts
 
 In the project directory, you can run:

@@ -31,19 +31,6 @@ import Lesson from "./lesson";
 import Listen from "./listen";
 import Material from "./material";
 
-function HtmlRedirect() {
-    const location = useLocation();
-    const navigate = useNavigate();
-    
-    React.useEffect(() => {
-        if (location.pathname.endsWith('.html')) {
-            navigate(location.pathname.replace(/\.html$/, ''), { replace: true });
-        }
-    }, [location, navigate]);
-    
-    return null;
-}
-
 function App() {
     const [currentTheme, setCurrentTheme] = React.useState<string>("brown");
     const [featureFlags, setFeatureFlags] = React.useState(() => {
@@ -108,7 +95,6 @@ function App() {
                             flexDirection: "column"
                         }}
                     >
-                        <HtmlRedirect />
                         <Header/>
                         <Box sx={{paddingTop: 16, minHeight: "90vh"}}>
                             <Routes>

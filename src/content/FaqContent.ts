@@ -158,7 +158,7 @@ const FaqContent: { [key: string]:  QA[] } = {
                     "<li><b>Jazz Guitar Study 3: Guitar Comping &#8212 Barry Galbraith</b><br/> Focuses on chordal accompaniment in various jazz styles and feels.</li>" +
                     "<li><b>How to Play Bebpop, Vol 2 &#8212 David Baker</b><br/>A great reference for jazz licks over a variety of chord progressions, helping players expand their soloing vocabulary.</li>" +
                     "<li><b>The Cellular Approach &#8212 Randy Vincent</b><br/>A modern, pattern-based method that shows how to connect licks seamlessly over chord changes, allowing you build cohesive and melodic solos.</li>" +
-                    "<li><b>Walking Bass for Jazz Guitar &#8212 Martin Taylor</b>An introduction to combining bass lines and shell voicings to comp for singers or other guitar players</li>" +
+                    "<li><b>Walking Bass for Jazz Guitar &#8212 Martin Taylor</b><br/>An introduction to combining bass lines and shell voicings to comp for singers or other guitar players</li>" +
                 "</ul>" +
                 "<b>Advanced Books</b>" +
                 "<ul>" +
