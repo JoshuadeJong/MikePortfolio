@@ -20,7 +20,7 @@ Other libraries can be found in the `package.json`.
 
 Hosting is managed by Github Pages on the `gh-pages` branch.
 From here Github will host the build and use the custom domain.
-There is currently  no Github Action to build and deploy from main, instead you must use the `npm run deploy` script.
+There is currently no Github Action to build and deploy from main, instead you must use the `npm run deploy` script.
 
 The domain is managed by //TODO
 
@@ -47,20 +47,16 @@ however you can configure dev only feature flags with the `isDev` value.
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm start` & `npm start-network`
 
-Runs the app in the development mode.\
+Using `npm start` or `npm start-network` you can run the app in development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+If you are running the app with `npm start-network` others on the local network will also be able to visit your site.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-#### Help!
-When I run `npm start` I see the following error code
-
-```Error: error:0308010C:digital envelope routines::unsupported```
-
-For now just run `export NODE_OPTIONS=--openssl-legacy-provider` and rerun `npm start`
+You can run the prod version of the app locally by setting `NODE_ENV=prod` before calling the start command.
 
 ### `npm test`
 
