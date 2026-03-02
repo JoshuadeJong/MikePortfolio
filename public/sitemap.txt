@@ -1,5 +1,5 @@
 https://www.michaeleskenazi1.com/
-https://www.michaeleskenazi1.com/?/home
-https://www.michaeleskenazi1.com/?/reviews
-https://www.michaeleskenazi1.com/?/contact
-https://www.michaeleskenazi1.com/?/faq
+https://www.michaeleskenazi1.com/home.html
+https://www.michaeleskenazi1.com/reviews.html
+https://www.michaeleskenazi1.com/contact.html
+https://www.michaeleskenazi1.com/faq.html
