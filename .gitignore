@@ -14,6 +14,12 @@
 # production
 /build
 
+# generated static pages (created by generate-static-pages.ts)
+/public/home.html
+/public/contact.html
+/public/reviews.html
+/public/faq.html
+
 # misc
 .DS_Store
 .env.local

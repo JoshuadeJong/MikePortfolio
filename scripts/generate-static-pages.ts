@@ -2,11 +2,10 @@ import * as fs from 'fs';
 import * as path from 'path';
 import {pages, template} from '../src/content/StaticContent';
 
-const buildDir = path.join(__dirname, '..', 'build');
+const outDir = path.join(__dirname, '..', process.argv[2] ?? 'build');
 
 pages.forEach(page => {
-  const filePath = path.join(buildDir, page.path);
-  fs.writeFileSync(filePath, template(page));
+  fs.writeFileSync(path.join(outDir, page.path), template(page));
   console.log(`Generated: ${page.path}`);
 });
 

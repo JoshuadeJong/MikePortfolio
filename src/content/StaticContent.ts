@@ -7,12 +7,15 @@ interface StaticPage {
   content: string;
 }
 
+const BASE_URL = 'https://www.michaeleskenazi1.com';
+
 export function template(page: any) {
   return `<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>${page.title}</title>
     <meta name="description" content="${page.description}" />
+    <link rel="canonical" href="${BASE_URL}/${page.path}" />
     
     <!-- Attempt to redirect the user to the React app -->
     <script type="text/javascript">

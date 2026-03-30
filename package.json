@@ -25,6 +25,7 @@
     "typescript": "^4.9.5"
   },
   "scripts": {
+    "prestart": "npx tsx scripts/generate-static-pages.ts public",
     "predeploy": "npm run build && npm run minify && cp CNAME ./build/CNAME",
     "deploy": "gh-pages -d build",
     "start": "HOST=localhost react-scripts start",
